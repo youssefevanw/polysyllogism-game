@@ -4,57 +4,707 @@
   "instructions": "Drag the correct terms into the syllogism to make it valid and sound.",
   "tokenType": "image",
   "problems": [
+
     {
       "name": "Barbara",
       "code": "AAA-1",
       "rows": [
-        { "label": "Major Premise", "quantifier": "All", "subject": ["mammals"], "copula": "are", "predicate": ["animals"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["mammals"] },
-        { "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["animals"] }
+        { "label": "Major Premise", "quantifier": "All", "subject": ["doctors-of-the-church"], "copula": "are", "predicate": ["saints"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["fathers-of-the-church"], "copula": "are", "predicate": ["doctors-of-the-church"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["fathers-of-the-church"], "copula": "are", "predicate": ["saints"] }
       ],
       "terms": [
-        { "id": "dogs", "label": "Dogs" },
-        { "id": "mammals", "label": "Mammals" },
-        { "id": "animals", "label": "Animals" }
+        { "id": "fathers-of-the-church", "label": "Fathers of the Church" },
+        { "id": "doctors-of-the-church", "label": "Doctors of the Church" },
+        { "id": "saints", "label": "Saints" }
       ],
       "distractors": [
-        { "id": "rocks", "label": "Rocks" },
-        { "id": "fish", "label": "Fish" }
+        { "id": "heretics", "label": "Heretics" },
+        { "id": "catechumens", "label": "Catechumens" }
+      ]
+    },
+    {
+      "name": "Barbara",
+      "code": "AAA-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["sacraments"], "copula": "are", "predicate": ["instituted-by-christ"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["sacraments-of-initiation"], "copula": "are", "predicate": ["sacraments"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["sacraments-of-initiation"], "copula": "are", "predicate": ["instituted-by-christ"] }
+      ],
+      "terms": [
+        { "id": "sacraments-of-initiation", "label": "Sacraments of Initiation" },
+        { "id": "sacraments", "label": "Sacraments" },
+        { "id": "instituted-by-christ", "label": "Instituted by Christ" }
+      ],
+      "distractors": [
+        { "id": "sacramentals", "label": "Sacramentals" },
+        { "id": "devotions", "label": "Devotions" }
+      ]
+    },
+
+    {
+      "name": "Celarent",
+      "code": "EAE-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["martyrs"], "copula": "are", "predicate": ["apostates"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["early-christian-martyrs"], "copula": "are", "predicate": ["martyrs"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["early-christian-martyrs"], "copula": "are", "predicate": ["apostates"] }
+      ],
+      "terms": [
+        { "id": "early-christian-martyrs", "label": "Early Christian Martyrs" },
+        { "id": "martyrs", "label": "Martyrs" },
+        { "id": "apostates", "label": "Apostates" }
+      ],
+      "distractors": [
+        { "id": "confessors", "label": "Confessors" },
+        { "id": "penitents", "label": "Penitents" }
       ]
     },
     {
       "name": "Celarent",
       "code": "EAE-1",
       "rows": [
-        { "label": "Major Premise", "quantifier": "No", "subject": ["reptiles"], "copula": "are", "predicate": ["mammals"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["reptiles"] },
-        { "label": "Conclusion", "quantifier": "No", "subject": ["dogs"], "copula": "are", "predicate": ["mammals"] }
+        { "label": "Major Premise", "quantifier": "No", "subject": ["ecumenical-councils"], "copula": "are", "predicate": ["fallible-assemblies"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["councils-of-nicaea"], "copula": "are", "predicate": ["ecumenical-councils"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["councils-of-nicaea"], "copula": "are", "predicate": ["fallible-assemblies"] }
       ],
       "terms": [
-        { "id": "dogs", "label": "Dogs" },
-        { "id": "reptiles", "label": "Reptiles" },
-        { "id": "mammals", "label": "Mammals" }
+        { "id": "councils-of-nicaea", "label": "Councils of Nicaea" },
+        { "id": "ecumenical-councils", "label": "Ecumenical Councils" },
+        { "id": "fallible-assemblies", "label": "Fallible Assemblies" }
       ],
       "distractors": [
-        { "id": "birds", "label": "Birds" }
+        { "id": "synods", "label": "Synods" },
+        { "id": "papal-conclaves", "label": "Papal Conclaves" }
+      ]
+    },
+
+    {
+      "name": "Darii",
+      "code": "AII-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["apostles"], "copula": "are", "predicate": ["chosen-by-christ"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["fishermen"], "copula": "are", "predicate": ["apostles"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["fishermen"], "copula": "are", "predicate": ["chosen-by-christ"] }
+      ],
+      "terms": [
+        { "id": "fishermen", "label": "Fishermen" },
+        { "id": "apostles", "label": "Apostles" },
+        { "id": "chosen-by-christ", "label": "Chosen by Christ" }
+      ],
+      "distractors": [
+        { "id": "pharisees", "label": "Pharisees" },
+        { "id": "zealots", "label": "Zealots" }
       ]
     },
     {
       "name": "Darii",
       "code": "AII-1",
       "rows": [
-        { "label": "Major Premise", "quantifier": "All", "subject": ["athletes"], "copula": "are", "predicate": ["healthy"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["students"], "copula": "are", "predicate": ["athletes"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["students"], "copula": "are", "predicate": ["healthy"] }
+        { "label": "Major Premise", "quantifier": "All", "subject": ["popes"], "copula": "are", "predicate": ["bishops-of-rome"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["popes"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["bishops-of-rome"] }
       ],
       "terms": [
-        { "id": "students", "label": "Students" },
-        { "id": "athletes", "label": "Athletes" },
-        { "id": "healthy", "label": "Healthy" }
+        { "id": "saints", "label": "Saints" },
+        { "id": "popes", "label": "Popes" },
+        { "id": "bishops-of-rome", "label": "Bishops of Rome" }
       ],
       "distractors": [
-        { "id": "teachers", "label": "Teachers" },
-        { "id": "lazy", "label": "Lazy" }
+        { "id": "cardinals", "label": "Cardinals" },
+        { "id": "abbots", "label": "Abbots" }
+      ]
+    },
+
+    {
+      "name": "Ferio",
+      "code": "EIO-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["heresies"], "copula": "are", "predicate": ["orthodox-teachings"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["early-church-movements"], "copula": "are", "predicate": ["heresies"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["early-church-movements"], "copula": "are not", "predicate": ["orthodox-teachings"] }
+      ],
+      "terms": [
+        { "id": "early-church-movements", "label": "Early Church Movements" },
+        { "id": "heresies", "label": "Heresies" },
+        { "id": "orthodox-teachings", "label": "Orthodox Teachings" }
+      ],
+      "distractors": [
+        { "id": "dogmas", "label": "Dogmas" },
+        { "id": "encyclicals", "label": "Encyclicals" }
+      ]
+    },
+    {
+      "name": "Ferio",
+      "code": "EIO-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["mortal-sins"], "copula": "are", "predicate": ["venial-sins"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["offenses-against-god"], "copula": "are", "predicate": ["mortal-sins"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["offenses-against-god"], "copula": "are not", "predicate": ["venial-sins"] }
+      ],
+      "terms": [
+        { "id": "offenses-against-god", "label": "Offenses Against God" },
+        { "id": "mortal-sins", "label": "Mortal Sins" },
+        { "id": "venial-sins", "label": "Venial Sins" }
+      ],
+      "distractors": [
+        { "id": "virtues", "label": "Virtues" },
+        { "id": "temptations", "label": "Temptations" }
+      ]
+    },
+
+    {
+      "name": "Cesare",
+      "code": "EAE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["protestants"], "copula": "are", "predicate": ["believers-in-papal-authority"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["catholics"], "copula": "are", "predicate": ["believers-in-papal-authority"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["catholics"], "copula": "are", "predicate": ["protestants"] }
+      ],
+      "terms": [
+        { "id": "catholics", "label": "Catholics" },
+        { "id": "protestants", "label": "Protestants" },
+        { "id": "believers-in-papal-authority", "label": "Believers in Papal Authority" }
+      ],
+      "distractors": [
+        { "id": "eastern-orthodox", "label": "Eastern Orthodox" },
+        { "id": "anglicans", "label": "Anglicans" }
+      ]
+    },
+    {
+      "name": "Cesare",
+      "code": "EAE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["iconoclasts"], "copula": "are", "predicate": ["venerators-of-icons"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["defenders-of-nicaea-ii"], "copula": "are", "predicate": ["venerators-of-icons"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["defenders-of-nicaea-ii"], "copula": "are", "predicate": ["iconoclasts"] }
+      ],
+      "terms": [
+        { "id": "defenders-of-nicaea-ii", "label": "Defenders of Nicaea II" },
+        { "id": "iconoclasts", "label": "Iconoclasts" },
+        { "id": "venerators-of-icons", "label": "Venerators of Icons" }
+      ],
+      "distractors": [
+        { "id": "arians", "label": "Arians" },
+        { "id": "gnostics", "label": "Gnostics" }
+      ]
+    },
+
+    {
+      "name": "Camestres",
+      "code": "AEE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["ordained-ministers"], "copula": "are", "predicate": ["baptized"] },
+        { "label": "Minor Premise", "quantifier": "No", "subject": ["unbaptized-persons"], "copula": "are", "predicate": ["baptized"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["unbaptized-persons"], "copula": "are", "predicate": ["ordained-ministers"] }
+      ],
+      "terms": [
+        { "id": "unbaptized-persons", "label": "Unbaptized Persons" },
+        { "id": "ordained-ministers", "label": "Ordained Ministers" },
+        { "id": "baptized", "label": "Baptized" }
+      ],
+      "distractors": [
+        { "id": "deacons", "label": "Deacons" },
+        { "id": "religious-brothers", "label": "Religious Brothers" }
+      ]
+    },
+    {
+      "name": "Camestres",
+      "code": "AEE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["dogmas"], "copula": "are", "predicate": ["infallibly-defined"] },
+        { "label": "Minor Premise", "quantifier": "No", "subject": ["theological-opinions"], "copula": "are", "predicate": ["infallibly-defined"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["theological-opinions"], "copula": "are", "predicate": ["dogmas"] }
+      ],
+      "terms": [
+        { "id": "theological-opinions", "label": "Theological Opinions" },
+        { "id": "dogmas", "label": "Dogmas" },
+        { "id": "infallibly-defined", "label": "Infallibly Defined" }
+      ],
+      "distractors": [
+        { "id": "doctrines", "label": "Doctrines" },
+        { "id": "encyclicals", "label": "Encyclicals" }
+      ]
+    },
+
+    {
+      "name": "Festino",
+      "code": "EIO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["lay-faithful"], "copula": "are", "predicate": ["ordained"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["members-of-the-church"], "copula": "are", "predicate": ["ordained"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["members-of-the-church"], "copula": "are not", "predicate": ["lay-faithful"] }
+      ],
+      "terms": [
+        { "id": "members-of-the-church", "label": "Members of the Church" },
+        { "id": "lay-faithful", "label": "Lay Faithful" },
+        { "id": "ordained", "label": "Ordained" }
+      ],
+      "distractors": [
+        { "id": "monks", "label": "Monks" },
+        { "id": "catechists", "label": "Catechists" }
+      ]
+    },
+    {
+      "name": "Festino",
+      "code": "EIO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["pelagians"], "copula": "are", "predicate": ["believers-in-original-sin"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["early-theologians"], "copula": "are", "predicate": ["believers-in-original-sin"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["early-theologians"], "copula": "are not", "predicate": ["pelagians"] }
+      ],
+      "terms": [
+        { "id": "early-theologians", "label": "Early Theologians" },
+        { "id": "pelagians", "label": "Pelagians" },
+        { "id": "believers-in-original-sin", "label": "Believers in Original Sin" }
+      ],
+      "distractors": [
+        { "id": "donatists", "label": "Donatists" },
+        { "id": "manicheans", "label": "Manicheans" }
+      ]
+    },
+
+    {
+      "name": "Baroco",
+      "code": "AOO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["canonical-gospels"], "copula": "are", "predicate": ["divinely-inspired"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["ancient-texts-about-jesus"], "copula": "are not", "predicate": ["divinely-inspired"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["ancient-texts-about-jesus"], "copula": "are not", "predicate": ["canonical-gospels"] }
+      ],
+      "terms": [
+        { "id": "ancient-texts-about-jesus", "label": "Ancient Texts About Jesus" },
+        { "id": "canonical-gospels", "label": "Canonical Gospels" },
+        { "id": "divinely-inspired", "label": "Divinely Inspired" }
+      ],
+      "distractors": [
+        { "id": "epistles", "label": "Epistles" },
+        { "id": "psalms", "label": "Psalms" }
+      ]
+    },
+    {
+      "name": "Baroco",
+      "code": "AOO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["ecumenical-councils"], "copula": "are", "predicate": ["confirmed-by-the-pope"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["church-synods"], "copula": "are not", "predicate": ["confirmed-by-the-pope"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["church-synods"], "copula": "are not", "predicate": ["ecumenical-councils"] }
+      ],
+      "terms": [
+        { "id": "church-synods", "label": "Church Synods" },
+        { "id": "ecumenical-councils", "label": "Ecumenical Councils" },
+        { "id": "confirmed-by-the-pope", "label": "Confirmed by the Pope" }
+      ],
+      "distractors": [
+        { "id": "papal-bulls", "label": "Papal Bulls" },
+        { "id": "canon-laws", "label": "Canon Laws" }
+      ]
+    },
+
+    {
+      "name": "Darapti",
+      "code": "AAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["evangelists"], "copula": "are", "predicate": ["authors-of-gospels"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["evangelists"], "copula": "are", "predicate": ["inspired-by-the-holy-spirit"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["inspired-by-the-holy-spirit"], "copula": "are", "predicate": ["authors-of-gospels"] }
+      ],
+      "terms": [
+        { "id": "inspired-by-the-holy-spirit", "label": "Inspired by the Holy Spirit" },
+        { "id": "evangelists", "label": "Evangelists" },
+        { "id": "authors-of-gospels", "label": "Authors of Gospels" }
+      ],
+      "distractors": [
+        { "id": "prophets", "label": "Prophets" },
+        { "id": "scribes", "label": "Scribes" }
+      ]
+    },
+    {
+      "name": "Darapti",
+      "code": "AAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["mendicant-orders"], "copula": "are", "predicate": ["religious-communities"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["mendicant-orders"], "copula": "are", "predicate": ["vowed-to-poverty"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["vowed-to-poverty"], "copula": "are", "predicate": ["religious-communities"] }
+      ],
+      "terms": [
+        { "id": "vowed-to-poverty", "label": "Vowed to Poverty" },
+        { "id": "mendicant-orders", "label": "Mendicant Orders" },
+        { "id": "religious-communities", "label": "Religious Communities" }
+      ],
+      "distractors": [
+        { "id": "diocesan-priests", "label": "Diocesan Priests" },
+        { "id": "hermits", "label": "Hermits" }
+      ]
+    },
+
+    {
+      "name": "Disamis",
+      "code": "IAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["desert-fathers"], "copula": "are", "predicate": ["writers-of-spiritual-texts"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["desert-fathers"], "copula": "are", "predicate": ["monks"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["monks"], "copula": "are", "predicate": ["writers-of-spiritual-texts"] }
+      ],
+      "terms": [
+        { "id": "monks", "label": "Monks" },
+        { "id": "desert-fathers", "label": "Desert Fathers" },
+        { "id": "writers-of-spiritual-texts", "label": "Writers of Spiritual Texts" }
+      ],
+      "distractors": [
+        { "id": "bishops", "label": "Bishops" },
+        { "id": "anchorites", "label": "Anchorites" }
+      ]
+    },
+    {
+      "name": "Disamis",
+      "code": "IAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["church-fathers"], "copula": "are", "predicate": ["greek-speakers"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["church-fathers"], "copula": "are", "predicate": ["theologians"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["theologians"], "copula": "are", "predicate": ["greek-speakers"] }
+      ],
+      "terms": [
+        { "id": "theologians", "label": "Theologians" },
+        { "id": "church-fathers", "label": "Church Fathers" },
+        { "id": "greek-speakers", "label": "Greek Speakers" }
+      ],
+      "distractors": [
+        { "id": "latin-speakers", "label": "Latin Speakers" },
+        { "id": "scholastics", "label": "Scholastics" }
+      ]
+    },
+
+    {
+      "name": "Datisi",
+      "code": "AII-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["benedictines"], "copula": "are", "predicate": ["followers-of-a-rule"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["benedictines"], "copula": "are", "predicate": ["missionaries"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["missionaries"], "copula": "are", "predicate": ["followers-of-a-rule"] }
+      ],
+      "terms": [
+        { "id": "missionaries", "label": "Missionaries" },
+        { "id": "benedictines", "label": "Benedictines" },
+        { "id": "followers-of-a-rule", "label": "Followers of a Rule" }
+      ],
+      "distractors": [
+        { "id": "franciscans", "label": "Franciscans" },
+        { "id": "jesuits", "label": "Jesuits" }
+      ]
+    },
+    {
+      "name": "Datisi",
+      "code": "AII-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["crusades"], "copula": "are", "predicate": ["military-campaigns"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["crusades"], "copula": "are", "predicate": ["called-by-popes"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["called-by-popes"], "copula": "are", "predicate": ["military-campaigns"] }
+      ],
+      "terms": [
+        { "id": "called-by-popes", "label": "Called by Popes" },
+        { "id": "crusades", "label": "Crusades" },
+        { "id": "military-campaigns", "label": "Military Campaigns" }
+      ],
+      "distractors": [
+        { "id": "pilgrimages", "label": "Pilgrimages" },
+        { "id": "inquisitions", "label": "Inquisitions" }
+      ]
+    },
+
+    {
+      "name": "Felapton",
+      "code": "EAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["cloistered-nuns"], "copula": "are", "predicate": ["itinerant-preachers"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["cloistered-nuns"], "copula": "are", "predicate": ["consecrated-religious"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["consecrated-religious"], "copula": "are not", "predicate": ["itinerant-preachers"] }
+      ],
+      "terms": [
+        { "id": "consecrated-religious", "label": "Consecrated Religious" },
+        { "id": "cloistered-nuns", "label": "Cloistered Nuns" },
+        { "id": "itinerant-preachers", "label": "Itinerant Preachers" }
+      ],
+      "distractors": [
+        { "id": "dominicans", "label": "Dominicans" },
+        { "id": "tertiaries", "label": "Tertiaries" }
+      ]
+    },
+    {
+      "name": "Felapton",
+      "code": "EAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["sacraments"], "copula": "are", "predicate": ["repeatable-without-limit"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["sacraments"], "copula": "are", "predicate": ["sacred-rites"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["sacred-rites"], "copula": "are not", "predicate": ["repeatable-without-limit"] }
+      ],
+      "terms": [
+        { "id": "sacred-rites", "label": "Sacred Rites" },
+        { "id": "sacraments", "label": "Sacraments" },
+        { "id": "repeatable-without-limit", "label": "Repeatable Without Limit" }
+      ],
+      "distractors": [
+        { "id": "blessings", "label": "Blessings" },
+        { "id": "novenas", "label": "Novenas" }
+      ]
+    },
+
+    {
+      "name": "Bocardo",
+      "code": "OAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["popes"], "copula": "are not", "predicate": ["canonized-saints"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["popes"], "copula": "are", "predicate": ["bishops-of-rome"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["bishops-of-rome"], "copula": "are not", "predicate": ["canonized-saints"] }
+      ],
+      "terms": [
+        { "id": "bishops-of-rome", "label": "Bishops of Rome" },
+        { "id": "popes", "label": "Popes" },
+        { "id": "canonized-saints", "label": "Canonized Saints" }
+      ],
+      "distractors": [
+        { "id": "patriarchs", "label": "Patriarchs" },
+        { "id": "cardinals", "label": "Cardinals" }
+      ]
+    },
+    {
+      "name": "Bocardo",
+      "code": "OAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["religious-orders"], "copula": "are not", "predicate": ["founded-in-the-middle-ages"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["religious-orders"], "copula": "are", "predicate": ["approved-by-the-church"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["approved-by-the-church"], "copula": "are not", "predicate": ["founded-in-the-middle-ages"] }
+      ],
+      "terms": [
+        { "id": "approved-by-the-church", "label": "Approved by the Church" },
+        { "id": "religious-orders", "label": "Religious Orders" },
+        { "id": "founded-in-the-middle-ages", "label": "Founded in the Middle Ages" }
+      ],
+      "distractors": [
+        { "id": "heresies", "label": "Heresies" },
+        { "id": "secret-societies", "label": "Secret Societies" }
+      ]
+    },
+
+    {
+      "name": "Ferison",
+      "code": "EIO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["gnostics"], "copula": "are", "predicate": ["orthodox-christians"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["gnostics"], "copula": "are", "predicate": ["authors-of-ancient-texts"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["authors-of-ancient-texts"], "copula": "are not", "predicate": ["orthodox-christians"] }
+      ],
+      "terms": [
+        { "id": "authors-of-ancient-texts", "label": "Authors of Ancient Texts" },
+        { "id": "gnostics", "label": "Gnostics" },
+        { "id": "orthodox-christians", "label": "Orthodox Christians" }
+      ],
+      "distractors": [
+        { "id": "nestorians", "label": "Nestorians" },
+        { "id": "montanists", "label": "Montanists" }
+      ]
+    },
+    {
+      "name": "Ferison",
+      "code": "EIO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["protestant-reformers"], "copula": "are", "predicate": ["defenders-of-papal-primacy"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["protestant-reformers"], "copula": "are", "predicate": ["former-priests"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["former-priests"], "copula": "are not", "predicate": ["defenders-of-papal-primacy"] }
+      ],
+      "terms": [
+        { "id": "former-priests", "label": "Former Priests" },
+        { "id": "protestant-reformers", "label": "Protestant Reformers" },
+        { "id": "defenders-of-papal-primacy", "label": "Defenders of Papal Primacy" }
+      ],
+      "distractors": [
+        { "id": "counter-reformers", "label": "Counter-Reformers" },
+        { "id": "humanists", "label": "Humanists" }
+      ]
+    },
+
+    {
+      "name": "Bramantip",
+      "code": "AAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["cardinal-virtues"], "copula": "are", "predicate": ["habits-of-the-soul"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["habits-of-the-soul"], "copula": "are", "predicate": ["perfections-of-human-nature"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["perfections-of-human-nature"], "copula": "are", "predicate": ["cardinal-virtues"] }
+      ],
+      "terms": [
+        { "id": "perfections-of-human-nature", "label": "Perfections of Human Nature" },
+        { "id": "cardinal-virtues", "label": "Cardinal Virtues" },
+        { "id": "habits-of-the-soul", "label": "Habits of the Soul" }
+      ],
+      "distractors": [
+        { "id": "theological-virtues", "label": "Theological Virtues" },
+        { "id": "capital-vices", "label": "Capital Vices" }
+      ]
+    },
+    {
+      "name": "Bramantip",
+      "code": "AAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["franciscans"], "copula": "are", "predicate": ["religious"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["religious"], "copula": "are", "predicate": ["baptized-christians"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["baptized-christians"], "copula": "are", "predicate": ["franciscans"] }
+      ],
+      "terms": [
+        { "id": "baptized-christians", "label": "Baptized Christians" },
+        { "id": "franciscans", "label": "Franciscans" },
+        { "id": "religious", "label": "Religious" }
+      ],
+      "distractors": [
+        { "id": "dominicans", "label": "Dominicans" },
+        { "id": "laypersons", "label": "Laypersons" }
+      ]
+    },
+
+    {
+      "name": "Camenes",
+      "code": "AEE-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["martyrs"], "copula": "are", "predicate": ["witnesses-to-the-faith"] },
+        { "label": "Minor Premise", "quantifier": "No", "subject": ["witnesses-to-the-faith"], "copula": "are", "predicate": ["deniers-of-christ"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["deniers-of-christ"], "copula": "are", "predicate": ["martyrs"] }
+      ],
+      "terms": [
+        { "id": "deniers-of-christ", "label": "Deniers of Christ" },
+        { "id": "martyrs", "label": "Martyrs" },
+        { "id": "witnesses-to-the-faith", "label": "Witnesses to the Faith" }
+      ],
+      "distractors": [
+        { "id": "confessors", "label": "Confessors" },
+        { "id": "apostates", "label": "Apostates" }
+      ]
+    },
+    {
+      "name": "Camenes",
+      "code": "AEE-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["trinitarian-christians"], "copula": "are", "predicate": ["believers-in-three-persons"] },
+        { "label": "Minor Premise", "quantifier": "No", "subject": ["believers-in-three-persons"], "copula": "are", "predicate": ["arians"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["arians"], "copula": "are", "predicate": ["trinitarian-christians"] }
+      ],
+      "terms": [
+        { "id": "arians", "label": "Arians" },
+        { "id": "trinitarian-christians", "label": "Trinitarian Christians" },
+        { "id": "believers-in-three-persons", "label": "Believers in Three Persons" }
+      ],
+      "distractors": [
+        { "id": "modalists", "label": "Modalists" },
+        { "id": "monothelites", "label": "Monothelites" }
+      ]
+    },
+
+    {
+      "name": "Dimaris",
+      "code": "IAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["mystics"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["mystics"], "copula": "are", "predicate": ["people-of-prayer"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["people-of-prayer"], "copula": "are", "predicate": ["saints"] }
+      ],
+      "terms": [
+        { "id": "people-of-prayer", "label": "People of Prayer" },
+        { "id": "saints", "label": "Saints" },
+        { "id": "mystics", "label": "Mystics" }
+      ],
+      "distractors": [
+        { "id": "ascetics", "label": "Ascetics" },
+        { "id": "visionaries", "label": "Visionaries" }
+      ]
+    },
+    {
+      "name": "Dimaris",
+      "code": "IAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["doctors-of-the-church"], "copula": "are", "predicate": ["women"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["women"], "copula": "are", "predicate": ["laity-or-religious"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["laity-or-religious"], "copula": "are", "predicate": ["doctors-of-the-church"] }
+      ],
+      "terms": [
+        { "id": "laity-or-religious", "label": "Laity or Religious" },
+        { "id": "doctors-of-the-church", "label": "Doctors of the Church" },
+        { "id": "women", "label": "Women" }
+      ],
+      "distractors": [
+        { "id": "bishops", "label": "Bishops" },
+        { "id": "abbesses", "label": "Abbesses" }
+      ]
+    },
+
+    {
+      "name": "Fesapo",
+      "code": "EAO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["heretics"], "copula": "are", "predicate": ["in-communion-with-rome"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["in-communion-with-rome"], "copula": "are", "predicate": ["members-of-the-catholic-church"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["members-of-the-catholic-church"], "copula": "are not", "predicate": ["heretics"] }
+      ],
+      "terms": [
+        { "id": "members-of-the-catholic-church", "label": "Members of the Catholic Church" },
+        { "id": "heretics", "label": "Heretics" },
+        { "id": "in-communion-with-rome", "label": "In Communion with Rome" }
+      ],
+      "distractors": [
+        { "id": "schismatics", "label": "Schismatics" },
+        { "id": "excommunicated", "label": "Excommunicated" }
+      ]
+    },
+    {
+      "name": "Fesapo",
+      "code": "EAO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["simoniacs"], "copula": "are", "predicate": ["acting-justly"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["acting-justly"], "copula": "are", "predicate": ["servants-of-god"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["servants-of-god"], "copula": "are not", "predicate": ["simoniacs"] }
+      ],
+      "terms": [
+        { "id": "servants-of-god", "label": "Servants of God" },
+        { "id": "simoniacs", "label": "Simoniacs" },
+        { "id": "acting-justly", "label": "Acting Justly" }
+      ],
+      "distractors": [
+        { "id": "nicolaitans", "label": "Nicolaitans" },
+        { "id": "prelates", "label": "Prelates" }
+      ]
+    },
+
+    {
+      "name": "Fresison",
+      "code": "EIO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["monophysites"], "copula": "are", "predicate": ["chalcedonian"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["chalcedonian"], "copula": "are", "predicate": ["eastern-christians"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["eastern-christians"], "copula": "are not", "predicate": ["monophysites"] }
+      ],
+      "terms": [
+        { "id": "eastern-christians", "label": "Eastern Christians" },
+        { "id": "monophysites", "label": "Monophysites" },
+        { "id": "chalcedonian", "label": "Chalcedonian" }
+      ],
+      "distractors": [
+        { "id": "nestorians", "label": "Nestorians" },
+        { "id": "maronites", "label": "Maronites" }
+      ]
+    },
+    {
+      "name": "Fresison",
+      "code": "EIO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["deists"], "copula": "are", "predicate": ["believers-in-revelation"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["believers-in-revelation"], "copula": "are", "predicate": ["philosophers"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["philosophers"], "copula": "are not", "predicate": ["deists"] }
+      ],
+      "terms": [
+        { "id": "philosophers", "label": "Philosophers" },
+        { "id": "deists", "label": "Deists" },
+        { "id": "believers-in-revelation", "label": "Believers in Revelation" }
+      ],
+      "distractors": [
+        { "id": "atheists", "label": "Atheists" },
+        { "id": "agnostics", "label": "Agnostics" }
       ]
     }
   ]
