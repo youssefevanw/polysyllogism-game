@@ -1,0 +1,30 @@
+{
+  "level": 4,
+  "title": "Polysyllogisms: Terms",
+  "instructions": "Drag the correct terms into the polysyllogism to make it valid and sound.",
+  "tokenType": "image",
+  "problems": [
+    {
+      "name": "Chain of Being",
+      "code": "AAA-1 + AAA-1",
+      "rows": [
+        { "label": "Premise 1", "quantifier": "All", "subject": ["living things"], "copula": "are", "predicate": ["substances"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["living things"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["substances"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["animals"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["substances"] }
+      ],
+      "terms": [
+        { "id": "dogs", "label": "Dogs" },
+        { "id": "animals", "label": "Animals" },
+        { "id": "living things", "label": "Living Things" },
+        { "id": "substances", "label": "Substances" }
+      ],
+      "distractors": [
+        { "id": "rocks", "label": "Rocks" },
+        { "id": "colors", "label": "Colors" },
+        { "id": "thoughts", "label": "Thoughts" }
+      ]
+    }
+  ]
+}

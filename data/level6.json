@@ -1,0 +1,30 @@
+{
+  "level": 6,
+  "title": "Goclenian Sorites",
+  "instructions": "Drag the correct terms into the Goclenian sorites to make it valid and sound.",
+  "tokenType": "image",
+  "problems": [
+    {
+      "name": "3-Premise Goclenian",
+      "premiseCount": 3,
+      "rows": [
+        { "label": "Premise 1", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["living things"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["mammals"], "copula": "are", "predicate": ["animals"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["mammals"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["living things"] }
+      ],
+      "terms": [
+        { "id": "dogs", "label": "Dogs" },
+        { "id": "mammals", "label": "Mammals" },
+        { "id": "animals", "label": "Animals" },
+        { "id": "living things", "label": "Living Things" }
+      ],
+      "distractors": [
+        { "id": "insects", "label": "Insects" },
+        { "id": "rocks", "label": "Rocks" },
+        { "id": "water", "label": "Water" },
+        { "id": "fire", "label": "Fire" }
+      ]
+    }
+  ]
+}

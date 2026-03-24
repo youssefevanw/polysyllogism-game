@@ -1,0 +1,61 @@
+{
+  "level": 2,
+  "title": "Syllogisms: Terms",
+  "instructions": "Drag the correct terms into the syllogism to make it valid and sound.",
+  "tokenType": "image",
+  "problems": [
+    {
+      "name": "Barbara",
+      "code": "AAA-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["mammals"], "copula": "are", "predicate": ["animals"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["mammals"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["animals"] }
+      ],
+      "terms": [
+        { "id": "dogs", "label": "Dogs" },
+        { "id": "mammals", "label": "Mammals" },
+        { "id": "animals", "label": "Animals" }
+      ],
+      "distractors": [
+        { "id": "rocks", "label": "Rocks" },
+        { "id": "fish", "label": "Fish" }
+      ]
+    },
+    {
+      "name": "Celarent",
+      "code": "EAE-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": ["reptiles"], "copula": "are", "predicate": ["mammals"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["reptiles"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["dogs"], "copula": "are", "predicate": ["mammals"] }
+      ],
+      "terms": [
+        { "id": "dogs", "label": "Dogs" },
+        { "id": "reptiles", "label": "Reptiles" },
+        { "id": "mammals", "label": "Mammals" }
+      ],
+      "distractors": [
+        { "id": "birds", "label": "Birds" }
+      ]
+    },
+    {
+      "name": "Darii",
+      "code": "AII-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": ["athletes"], "copula": "are", "predicate": ["healthy"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["students"], "copula": "are", "predicate": ["athletes"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["students"], "copula": "are", "predicate": ["healthy"] }
+      ],
+      "terms": [
+        { "id": "students", "label": "Students" },
+        { "id": "athletes", "label": "Athletes" },
+        { "id": "healthy", "label": "Healthy" }
+      ],
+      "distractors": [
+        { "id": "teachers", "label": "Teachers" },
+        { "id": "lazy", "label": "Lazy" }
+      ]
+    }
+  ]
+}

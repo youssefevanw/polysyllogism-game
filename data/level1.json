@@ -1,0 +1,184 @@
+{
+  "level": 1,
+  "title": "Syllogisms: Notated",
+  "instructions": "Drag S, M, and P into the correct positions for each syllogism.",
+  "tokenType": "notation",
+  "tokens": [
+    { "id": "S", "label": "S", "sublabel": "Minor", "color": "#7c3aed" },
+    { "id": "M", "label": "M", "sublabel": "Middle", "color": "#0d9488" },
+    { "id": "P", "label": "P", "sublabel": "Major", "color": "#d97706" }
+  ],
+  "problems": [
+    {
+      "name": "Barbara",
+      "code": "AAA-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Celarent",
+      "code": "EAE-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Darii",
+      "code": "AII-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Ferio",
+      "code": "EIO-1",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Cesare",
+      "code": "EAE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Camestres",
+      "code": "AEE-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Festino",
+      "code": "EIO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Baroco",
+      "code": "AOO-2",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "M" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Darapti",
+      "code": "AAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Disamis",
+      "code": "IAI-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Datisi",
+      "code": "AII-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Felapton",
+      "code": "EAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Bocardo",
+      "code": "OAO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": "M", "copula": "are not", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Ferison",
+      "code": "EIO-3",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Bramantip",
+      "code": "AAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Camenes",
+      "code": "AEE-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Dimaris",
+      "code": "IAI-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "Some", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Fesapo",
+      "code": "EAO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    },
+    {
+      "name": "Fresison",
+      "code": "EIO-4",
+      "rows": [
+        { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
+        { "label": "Conclusion", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "P" }
+      ]
+    }
+  ]
+}
