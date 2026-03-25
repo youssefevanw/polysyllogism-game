@@ -2,26 +2,42 @@
 (function() {
   'use strict';
 
-  var TRACK_SIZE = 22;
-  var GEORGE_START = 11;
-  var DRAGON_START = 12;
-  var WIN_POS = 22;   // Dragon pushed here = win
   var LOSE_POS = 1;   // George pushed here = lose
 
   var state = null;
 
-  function createState(levelNum, levelData) {
-    // Shuffle problems
-    var problems = levelData.problems.slice();
-    shuffle(problems);
+  function createState(levelNum, levelData, questionCount) {
+    questionCount = questionCount || 10;
+    var trackSize = (questionCount * 2) + 2;
+    var georgeStart = Math.floor(trackSize / 2);
+    var dragonStart = georgeStart + 1;
+
+    // Shuffle and select problems
+    var allProblems = levelData.problems.slice();
+    shuffle(allProblems);
+    var problems;
+    if (allProblems.length >= questionCount) {
+      problems = allProblems.slice(0, questionCount);
+    } else {
+      // Cycle through problems if fewer than requested
+      problems = [];
+      while (problems.length < questionCount) {
+        shuffle(allProblems);
+        for (var i = 0; i < allProblems.length && problems.length < questionCount; i++) {
+          problems.push(allProblems[i]);
+        }
+      }
+    }
 
     return {
       levelNum: levelNum,
       levelData: levelData,
       problems: problems,
       currentIndex: 0,
-      georgePos: GEORGE_START,
-      dragonPos: DRAGON_START,
+      trackSize: trackSize,
+      georgePos: georgeStart,
+      dragonPos: dragonStart,
+      questionCount: questionCount,
       runStats: { correct: 0, wrong: 0, reveals: 0 },
       questionState: createQuestionState(),
       gameOver: false,
@@ -48,8 +64,8 @@
     return arr;
   }
 
-  function startBattle(levelNum, levelData) {
-    state = createState(levelNum, levelData);
+  function startBattle(levelNum, levelData, questionCount) {
+    state = createState(levelNum, levelData, questionCount);
     return state;
   }
 
@@ -71,18 +87,29 @@
     var results = [];
     var allCorrect = true;
 
-    // Build expected answers from problem rows
+    // Build expected answers from problem rows (bridge-aware)
     var expected = {};
-    problem.rows.forEach(function(row, rowIdx) {
-      // subject zone
-      var subjKey = 'zone-' + rowIdx + '-subject';
-      var subjAnswer = Array.isArray(row.subject) ? row.subject : [row.subject];
-      expected[subjKey] = subjAnswer;
-
-      // predicate zone
-      var predKey = 'zone-' + rowIdx + '-predicate';
-      var predAnswer = Array.isArray(row.predicate) ? row.predicate : [row.predicate];
-      expected[predKey] = predAnswer;
+    var flatIdx = 0;
+    problem.rows.forEach(function(row) {
+      if (row.type === 'bridge') {
+        row.rows.forEach(function(subRow) {
+          var subjKey = 'zone-' + flatIdx + '-subject';
+          var subjAnswer = Array.isArray(subRow.subject) ? subRow.subject : [subRow.subject];
+          expected[subjKey] = subjAnswer;
+          var predKey = 'zone-' + flatIdx + '-predicate';
+          var predAnswer = Array.isArray(subRow.predicate) ? subRow.predicate : [subRow.predicate];
+          expected[predKey] = predAnswer;
+          flatIdx++;
+        });
+      } else {
+        var subjKey = 'zone-' + flatIdx + '-subject';
+        var subjAnswer = Array.isArray(row.subject) ? row.subject : [row.subject];
+        expected[subjKey] = subjAnswer;
+        var predKey = 'zone-' + flatIdx + '-predicate';
+        var predAnswer = Array.isArray(row.predicate) ? row.predicate : [row.predicate];
+        expected[predKey] = predAnswer;
+        flatIdx++;
+      }
     });
 
     Object.keys(expected).forEach(function(zoneId) {
@@ -115,8 +142,8 @@
     qs.firstAttemptMade = true;
 
     // Check win
-    if (state.dragonPos >= WIN_POS) {
-      state.dragonPos = WIN_POS;
+    if (state.dragonPos >= state.trackSize) {
+      state.dragonPos = state.trackSize;
       state.gameOver = true;
       state.won = true;
       Game.Storage.recordWin(state.levelNum, state.runStats);
@@ -196,7 +223,7 @@
   }
 
   function getTrackSize() {
-    return TRACK_SIZE;
+    return state ? state.trackSize : 22;
   }
 
   Game.Engine = {
@@ -209,8 +236,6 @@
     handleReveal: handleReveal,
     nextQuestion: nextQuestion,
     getTrackSize: getTrackSize,
-    TRACK_SIZE: TRACK_SIZE,
-    WIN_POS: WIN_POS,
     LOSE_POS: LOSE_POS
   };
 })();
