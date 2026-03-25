@@ -144,6 +144,24 @@
     save(data);
   }
 
+  function exportCode() {
+    var data = getData();
+    return btoa(JSON.stringify(data));
+  }
+
+  function importCode(code) {
+    try {
+      var decoded = JSON.parse(atob(code));
+      if (!decoded || !decoded.version || !decoded.levels || !decoded.stats) {
+        return { success: false, error: 'Invalid save code — try again.' };
+      }
+      save(decoded);
+      return { success: true };
+    } catch (e) {
+      return { success: false, error: 'Invalid save code — try again.' };
+    }
+  }
+
   Game.Storage = {
     init: init,
     isMuted: isMuted,
@@ -157,6 +175,8 @@
     getStats: getStats,
     getLevelsBeatenCount: getLevelsBeatenCount,
     resetAll: resetAll,
-    getData: getData
+    getData: getData,
+    exportCode: exportCode,
+    importCode: importCode
   };
 })();
