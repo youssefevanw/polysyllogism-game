@@ -11,6 +11,7 @@
   "problems": [
     {
       "name": "Barbara",
+      "code": "AAA-1",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
@@ -19,6 +20,7 @@
     },
     {
       "name": "Celarent",
+      "code": "EAE-1",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
@@ -27,6 +29,7 @@
     },
     {
       "name": "Darii",
+      "code": "AII-1",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
@@ -35,6 +38,7 @@
     },
     {
       "name": "Ferio",
+      "code": "EIO-1",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
@@ -43,6 +47,7 @@
     },
     {
       "name": "Cesare",
+      "code": "EAE-2",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "S", "copula": "are", "predicate": "M" },
@@ -51,6 +56,7 @@
     },
     {
       "name": "Camestres",
+      "code": "AEE-2",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "No", "subject": "S", "copula": "are", "predicate": "M" },
@@ -59,6 +65,7 @@
     },
     {
       "name": "Festino",
+      "code": "EIO-2",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are", "predicate": "M" },
@@ -67,6 +74,7 @@
     },
     {
       "name": "Baroco",
+      "code": "AOO-2",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "S", "copula": "are not", "predicate": "M" },
@@ -75,6 +83,7 @@
     },
     {
       "name": "Darapti",
+      "code": "AAI-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -83,6 +92,7 @@
     },
     {
       "name": "Disamis",
+      "code": "IAI-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -91,6 +101,7 @@
     },
     {
       "name": "Datisi",
+      "code": "AII-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
@@ -99,6 +110,7 @@
     },
     {
       "name": "Felapton",
+      "code": "EAO-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -107,6 +119,7 @@
     },
     {
       "name": "Bocardo",
+      "code": "OAO-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "Some", "subject": "M", "copula": "are not", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -115,6 +128,7 @@
     },
     {
       "name": "Ferison",
+      "code": "EIO-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "P" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
@@ -123,6 +137,7 @@
     },
     {
       "name": "Bramantip",
+      "code": "AAI-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -131,6 +146,7 @@
     },
     {
       "name": "Camenes",
+      "code": "AEE-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "No", "subject": "M", "copula": "are", "predicate": "S" },
@@ -139,6 +155,7 @@
     },
     {
       "name": "Dimaris",
+      "code": "IAI-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "Some", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -147,6 +164,7 @@
     },
     {
       "name": "Fesapo",
+      "code": "EAO-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "All", "subject": "M", "copula": "are", "predicate": "S" },
@@ -155,6 +173,7 @@
     },
     {
       "name": "Fresison",
+      "code": "EIO-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": "P", "copula": "are", "predicate": "M" },
         { "label": "Minor Premise", "quantifier": "Some", "subject": "M", "copula": "are", "predicate": "S" },
