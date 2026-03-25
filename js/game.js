@@ -83,6 +83,11 @@
     // Returns: { allCorrect, results: [{zoneId, correct, expected, got}] }
     if (!state || state.gameOver) return null;
 
+    // Pairing game type
+    if (state.levelData.gameType === 'pairing') {
+      return checkPairingAnswer(userAnswers);
+    }
+
     var problem = getCurrentProblem();
     var results = [];
     var allCorrect = true;
@@ -118,6 +123,29 @@
       var isCorrect = exp.indexOf(got) !== -1;
       if (!isCorrect) allCorrect = false;
       results.push({ zoneId: zoneId, correct: isCorrect, expected: exp, got: got });
+    });
+
+    return { allCorrect: allCorrect, results: results };
+  }
+
+  function checkPairingAnswer(userAnswers) {
+    var problem = getCurrentProblem();
+    var selected = userAnswers.selected || [];
+    var correct = problem.correct || [];
+    var allCorrect = true;
+    var results = [];
+
+    problem.options.forEach(function(option) {
+      var isSelected = selected.indexOf(option) !== -1;
+      var shouldBeSelected = correct.indexOf(option) !== -1;
+      var optionCorrect = (isSelected === shouldBeSelected);
+      if (!optionCorrect) allCorrect = false;
+      results.push({
+        option: option,
+        correct: optionCorrect,
+        selected: isSelected,
+        shouldBeSelected: shouldBeSelected
+      });
     });
 
     return { allCorrect: allCorrect, results: results };
