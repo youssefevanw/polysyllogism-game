@@ -814,10 +814,10 @@ body::before {
   font-size: 7px;
   color: var(--text-secondary);
   text-align: center;
-  max-width: 60px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-width: 100px;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .token-image {
