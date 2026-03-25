@@ -257,7 +257,7 @@
         { "id": "believers-in-original-sin", "label": "Believers in Original Sin" }
       ],
       "distractors": [
-        { "id": "church-buildings", "label": "Church Buildings" },
+        { "id": "church-buildings", "label": "Church Buildings" }
       ]
     },
 
