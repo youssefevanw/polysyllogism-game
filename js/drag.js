@@ -11,11 +11,14 @@
     setupClickListeners(container);
   }
 
+  var isDragging = false; // Track drag state to prevent click interference
+
   function setupDragListeners(container) {
     // Drag start on tokens
     container.addEventListener('dragstart', function(e) {
       var token = e.target.closest('.game-token');
       if (!token) return;
+      isDragging = true;
       e.dataTransfer.setData('text/plain', token.dataset.tokenId);
       e.dataTransfer.effectAllowed = 'copy';
       token.classList.add('dragging');
@@ -25,6 +28,8 @@
     container.addEventListener('dragend', function(e) {
       var token = e.target.closest('.game-token');
       if (token) token.classList.remove('dragging');
+      // Delay clearing isDragging so the subsequent click event is suppressed
+      setTimeout(function() { isDragging = false; }, 50);
     });
 
     // Drag over/enter/leave on drop zones
@@ -57,10 +62,17 @@
   }
 
   function setupClickListeners(container) {
-    container.addEventListener('click', function(e) {
+    function handleInteraction(e) {
+      // Suppress clicks that fire right after a drag operation
+      if (isDragging) return;
+
+      // Determine the target element
+      var target = e.target;
+
       // Click on token — select it
-      var token = e.target.closest('.game-token');
+      var token = target.closest('.game-token');
       if (token) {
+        e.preventDefault(); // Prevent touch from triggering drag
         if (selectedToken === token) {
           clearSelectedToken();
         } else {
@@ -72,8 +84,9 @@
       }
 
       // Click on drop zone — place selected token
-      var zone = e.target.closest('.drop-zone');
+      var zone = target.closest('.drop-zone');
       if (zone && !zone.classList.contains('locked')) {
+        e.preventDefault();
         if (selectedToken) {
           placeToken(zone, selectedToken.dataset.tokenId);
           clearSelectedToken();
@@ -84,6 +97,26 @@
           }
         }
         return;
+      }
+
+      // Click on empty area — deselect token
+      if (!token && !zone) {
+        clearSelectedToken();
+      }
+    }
+
+    container.addEventListener('click', handleInteraction);
+    // Touch support: use touchend for more reliable tap detection on mobile
+    container.addEventListener('touchend', function(e) {
+      // Only handle single-finger taps
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        var touch = e.changedTouches[0];
+        // Update target to what's under the touch point
+        var target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target) {
+          e.target = target;
+          handleInteraction(e);
+        }
       }
     });
   }
