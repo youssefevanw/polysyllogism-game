@@ -61,6 +61,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
@@ -75,7 +82,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "All",
           "subject": "S2",
           "copula": "are",
@@ -102,6 +109,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
@@ -116,7 +130,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -143,6 +157,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "P2",
@@ -157,7 +178,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -184,6 +205,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "P2",
@@ -198,7 +226,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -225,6 +253,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
@@ -239,7 +274,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -266,6 +301,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
@@ -280,7 +322,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -307,6 +349,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "P2",
@@ -321,7 +370,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -348,6 +397,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "All",
           "subject": "P2",
@@ -362,7 +418,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -389,6 +445,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -403,7 +466,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -430,6 +493,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -444,7 +514,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -471,6 +541,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -485,7 +562,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -512,6 +589,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -526,7 +610,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -553,6 +637,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -567,7 +658,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -594,6 +685,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -608,7 +706,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -635,6 +733,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -649,7 +754,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -676,6 +781,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -690,7 +802,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -717,6 +829,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -731,7 +850,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -758,6 +877,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -772,7 +898,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -799,6 +925,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -813,7 +946,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -840,6 +973,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -854,7 +994,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -881,6 +1021,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -895,7 +1042,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -922,6 +1069,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -936,7 +1090,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -963,6 +1117,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -977,7 +1138,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1004,6 +1165,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1018,7 +1186,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1045,6 +1213,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1059,7 +1234,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1086,6 +1261,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1100,7 +1282,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1127,6 +1309,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1141,7 +1330,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1168,6 +1357,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1182,7 +1378,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -1209,6 +1405,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1223,7 +1426,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1250,6 +1453,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1264,7 +1474,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -1291,6 +1501,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1305,7 +1522,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1332,6 +1549,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1346,7 +1570,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1373,6 +1597,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -1387,7 +1618,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1414,6 +1645,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1428,7 +1666,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1455,6 +1693,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -1469,7 +1714,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1496,6 +1741,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1510,7 +1762,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1537,6 +1789,13 @@
           "predicate": "M1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1551,7 +1810,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1578,6 +1837,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1592,7 +1858,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1619,6 +1885,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -1633,7 +1906,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1660,6 +1933,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1674,7 +1954,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1701,6 +1981,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -1715,7 +2002,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1742,6 +2029,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1756,7 +2050,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1783,6 +2077,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -1797,7 +2098,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1824,6 +2125,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1838,7 +2146,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1865,6 +2173,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1879,7 +2194,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1906,6 +2221,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1920,7 +2242,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -1947,6 +2269,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -1961,7 +2290,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -1988,6 +2317,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -2002,7 +2338,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -2029,6 +2365,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -2043,7 +2386,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -2070,6 +2413,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -2084,7 +2434,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2111,6 +2461,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -2125,7 +2482,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "No",
           "subject": "S2",
           "copula": "are",
@@ -2152,6 +2509,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -2166,7 +2530,7 @@
           "predicate": "M2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2193,6 +2557,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -2207,7 +2578,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2234,6 +2605,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
@@ -2248,7 +2626,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2275,6 +2653,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -2289,7 +2674,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2316,6 +2701,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "No",
           "subject": "P2",
@@ -2330,7 +2722,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2357,6 +2749,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -2371,7 +2770,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -2398,6 +2797,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
@@ -2412,7 +2818,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are",
@@ -2439,6 +2845,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -2453,7 +2866,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
@@ -2480,6 +2893,13 @@
           "predicate": "S1"
         },
         {
+          "label": "Conclusion 1",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are not",
+          "predicate": "P1"
+        },
+        {
           "label": "Premise 3",
           "quantifier": "Some",
           "subject": "M2",
@@ -2494,7 +2914,7 @@
           "predicate": "S2"
         },
         {
-          "label": "Conclusion",
+          "label": "Conclusion 2",
           "quantifier": "Some",
           "subject": "S2",
           "copula": "are not",
