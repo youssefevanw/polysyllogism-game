@@ -450,17 +450,17 @@
       "code": "OAO-3",
       "rows": [
         { "label": "Major Premise", "quantifier": "Some", "subject": ["religious-orders"], "copula": "are not", "predicate": ["founded-in-the-middle-ages"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["religious-orders"], "copula": "are", "predicate": ["approved-by-the-church"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["approved-by-the-church"], "copula": "are not", "predicate": ["founded-in-the-middle-ages"] }
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["religious-orders"], "copula": "are", "predicate": ["things-approved-by-the-church"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["things-approved-by-the-church"], "copula": "are not", "predicate": ["founded-in-the-middle-ages"] }
       ],
       "terms": [
-        { "id": "approved-by-the-church", "label": "Approved by the Church" },
+        { "id": "things-approved-by-the-church", "label": "Things Approved by the Church" },
         { "id": "religious-orders", "label": "Religious Orders" },
         { "id": "founded-in-the-middle-ages", "label": "Founded in the Middle Ages" }
       ],
       "distractors": [
         { "id": "breakdancers", "label": "Breakdancers" },
-        { "id": "dominicans", "label": "Dominicans" }
+        { "id": "circuses", "label": "Circuses" }
       ]
     },
 
