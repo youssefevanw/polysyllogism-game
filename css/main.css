@@ -1,4 +1,4 @@
-/* George and the Dragon — 8-bit themed styles */
+/* George and the Dragon â€” 8-bit themed styles */
 
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
@@ -75,7 +75,6 @@ body::before {
   letter-spacing: 1px;
   transition: all 0.15s;
   background: none;
-  color: var(--text-primary);    
   position: relative;
 }
 
@@ -815,10 +814,10 @@ body::before {
   font-size: 7px;
   color: var(--text-secondary);
   text-align: center;
-  max-width: 100px;
-  word-wrap: break-word;
-  white-space: normal;
-  line-height: 1.4;
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .token-image {
@@ -833,6 +832,94 @@ body::before {
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* ===== PAIRING GAME MODE ===== */
+.pairing-target {
+  font-family: var(--font-pixel);
+  font-size: 18px;
+  color: var(--accent-gold);
+  text-align: center;
+  margin-bottom: 6px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.pairing-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 12px;
+}
+
+.pairing-option {
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  padding: 16px 12px;
+  background: var(--bg-card);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.15s;
+  border-radius: 4px;
+}
+
+.pairing-option:hover {
+  border-color: #777;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.pairing-option.selected {
+  border-color: var(--accent-gold);
+  background: rgba(255, 215, 0, 0.12);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.pairing-option.option-correct {
+  border-color: var(--accent-green) !important;
+  background: rgba(74, 222, 128, 0.15) !important;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+}
+
+.pairing-option.option-incorrect {
+  border-color: var(--accent-red) !important;
+  background: rgba(244, 67, 54, 0.15) !important;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.3);
+  animation: shake 0.4s ease-out;
+}
+
+.pairing-option.option-missed {
+  border-color: var(--accent-green) !important;
+  border-style: dashed !important;
+  background: rgba(74, 222, 128, 0.08) !important;
+  animation: pulse-border 1s ease-in-out infinite;
+}
+
+.pairing-option.option-revealed {
+  border-color: var(--accent-green) !important;
+  background: rgba(74, 222, 128, 0.15) !important;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.3);
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 8px rgba(74, 222, 128, 0.3); }
+  50% { box-shadow: 0 0 16px rgba(74, 222, 128, 0.6); }
+}
+
+.pairing-option.locked {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+  .pairing-options {
+    grid-template-columns: 1fr;
+  }
+  .pairing-target {
+    font-size: 14px;
+  }
 }
 
 /* ===== GAME OVERLAY (Win/Lose) ===== */
