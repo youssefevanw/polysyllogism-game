@@ -3,7 +3,7 @@
   'use strict';
 
   var STORAGE_KEY = 'georgeAndDragon';
-  var CURRENT_VERSION = 1;
+  var CURRENT_VERSION = 2;
 
   var DEFAULT_DATA = {
     version: CURRENT_VERSION,
