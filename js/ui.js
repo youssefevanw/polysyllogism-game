@@ -23,6 +23,20 @@
     html += '<button class="btn-icon" id="btn-mute" title="Toggle Sound">' + getMuteIcon() + '</button>';
     html += '</div>';
     html += '</div>';
+    // How to Play
+    html += '<div class="how-to-play">';
+    html += '<button class="btn btn-sm how-to-play-toggle" id="btn-how-to-play">How to Play</button>';
+    html += '<div class="how-to-play-content hidden" id="how-to-play-content">';
+    html += '<p><strong>Objective:</strong> Defeat the dragon by answering syllogism questions correctly.</p>';
+    html += '<p><strong>The Track:</strong> You and the dragon face off on a track. George (you) starts on the left, the dragon on the right.</p>';
+    html += '<p><strong>Correct answer (first try):</strong> Both George and the dragon advance one space toward the center — you\'re winning ground.</p>';
+    html += '<p><strong>Wrong answer (first try):</strong> Both shift one space backward — the dragon pushes you back. You can retry the question after a wrong answer, but no more movement happens on that question.</p>';
+    html += '<p><strong>Reveal answer:</strong> Costs the same as a wrong answer (-1 position). Use it to learn, but it comes at a price.</p>';
+    html += '<p><strong>Win condition:</strong> Push the dragon all the way to the last position.</p>';
+    html += '<p><strong>Lose condition:</strong> Get pushed back to position 1.</p>';
+    html += '<p>Drag the correct tokens (letters or terms) into the blank slots to form valid syllogisms. Good luck, soldier.</p>';
+    html += '</div>';
+    html += '</div>';
     // Garden at top
     html += '<div class="garden-area" id="garden-area">';
     if (allBeaten) {
@@ -66,6 +80,11 @@
         Game.Sound.playDoorClick();
         Game.App.navigate('battle', { level: level });
       });
+    });
+    document.getElementById('btn-how-to-play').addEventListener('click', function() {
+      var content = document.getElementById('how-to-play-content');
+      content.classList.toggle('hidden');
+      this.textContent = content.classList.contains('hidden') ? 'How to Play' : 'Hide Rules';
     });
     document.getElementById('btn-stats').addEventListener('click', function() {
       Game.App.navigate('stats');
@@ -126,6 +145,24 @@
     }
     html += '</tbody></table>';
     html += '</div>';
+    // Save/Load Code
+    html += '<div class="stats-card">';
+    html += '<h3>Save / Load Progress</h3>';
+    html += '<div class="save-load-section">';
+    html += '<div class="save-section">';
+    html += '<button class="btn btn-primary btn-sm" id="btn-get-save-code">Get Save Code</button>';
+    html += '<div class="save-code-output hidden" id="save-code-output">';
+    html += '<textarea class="save-code-textarea" id="save-code-text" readonly></textarea>';
+    html += '<button class="btn btn-secondary btn-sm" id="btn-copy-code">Copy</button>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="load-section">';
+    html += '<input type="text" class="save-code-input" id="load-code-input" placeholder="Paste save code here...">';
+    html += '<button class="btn btn-primary btn-sm" id="btn-restore">Restore</button>';
+    html += '<div class="save-load-error hidden" id="load-error"></div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
     // Reset button
     html += '<div class="stats-reset">';
     html += '<button class="btn btn-danger" id="btn-reset">Reset All Progress</button>';
@@ -134,6 +171,37 @@
     statsView.innerHTML = html;
     document.getElementById('btn-stats-back').addEventListener('click', function() {
       Game.App.navigate('map');
+    });
+    document.getElementById('btn-get-save-code').addEventListener('click', function() {
+      var code = Game.Storage.exportCode();
+      var output = document.getElementById('save-code-output');
+      var textArea = document.getElementById('save-code-text');
+      textArea.value = code;
+      output.classList.remove('hidden');
+    });
+    document.getElementById('btn-copy-code').addEventListener('click', function() {
+      var textArea = document.getElementById('save-code-text');
+      textArea.select();
+      document.execCommand('copy');
+      this.textContent = 'Copied!';
+      var btn = this;
+      setTimeout(function() { btn.textContent = 'Copy'; }, 1500);
+    });
+    document.getElementById('btn-restore').addEventListener('click', function() {
+      var code = document.getElementById('load-code-input').value.trim();
+      var errorEl = document.getElementById('load-error');
+      if (!code) {
+        errorEl.textContent = 'Please paste a save code first.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      var result = Game.Storage.importCode(code);
+      if (result.success) {
+        location.reload();
+      } else {
+        errorEl.textContent = result.error;
+        errorEl.classList.remove('hidden');
+      }
     });
     document.getElementById('btn-reset').addEventListener('click', function() {
       if (confirm('Are you sure? This will reset ALL progress and cannot be undone.')) {
@@ -180,7 +248,7 @@
     });
   }
   function renderTrack(state) {
-    var trackSize = Game.Engine.TRACK_SIZE;
+    var trackSize = state.trackSize || Game.Engine.getTrackSize();
     var html = '<div class="track-wrapper">';
     // George sprite
     html += '<div class="sprite-george" id="sprite-george" style="left:' + posToPercent(state.georgePos, trackSize) + '%">';
@@ -211,7 +279,7 @@
   function updateTrack() {
     var state = Game.Engine.getState();
     if (!state) return;
-    var trackSize = Game.Engine.TRACK_SIZE;
+    var trackSize = state.trackSize || Game.Engine.getTrackSize();
     // Update sprite positions
     var george = document.getElementById('sprite-george');
     var dragon = document.getElementById('sprite-dragon');
@@ -250,31 +318,51 @@
     var area = document.getElementById('question-area');
     if (!area) return;
     var html = '';
-    // Problem name
+    // Problem name and code toggle
     html += '<div class="question-header">';
     if (problem.name) {
       html += '<span class="question-name">' + problem.name + '</span>';
     }
     if (problem.code) {
-      html += '<span class="question-code">' + problem.code + '</span>';
+      html += '<span class="question-code hidden" id="code-value">' + problem.code + '</span>';
+      html += '<button class="btn btn-sm btn-icon code-toggle" id="btn-code-toggle" title="Show/Hide Code">Show Code</button>';
     }
     html += '</div>';
     // Instructions
     if (levelData.instructions) {
       html += '<div class="question-instructions">' + levelData.instructions + '</div>';
     }
-    // Premise rows
+    // Premise rows (with bridge support)
     html += '<div class="premises-container">';
-    problem.rows.forEach(function(row, rowIdx) {
-      html += '<div class="premise-row">';
-      html += '<div class="premise-label">' + row.label + '</div>';
-      html += '<div class="premise-content">';
-      html += '<span class="premise-text">' + row.quantifier + '</span>';
-      html += '<div class="drop-zone" data-zone-id="zone-' + rowIdx + '-subject" draggable="false"></div>';
-      html += '<span class="premise-text">' + row.copula + '</span>';
-      html += '<div class="drop-zone" data-zone-id="zone-' + rowIdx + '-predicate" draggable="false"></div>';
-      html += '</div>';
-      html += '</div>';
+    var flatIdx = 0;
+    problem.rows.forEach(function(row) {
+      if (row.type === 'bridge') {
+        html += '<div class="bridge-group">';
+        row.rows.forEach(function(subRow) {
+          html += '<div class="premise-row bridge-row">';
+          html += '<div class="premise-label">' + subRow.label + '</div>';
+          html += '<div class="premise-content">';
+          html += '<span class="premise-text">' + subRow.quantifier + '</span>';
+          html += '<div class="drop-zone" data-zone-id="zone-' + flatIdx + '-subject" draggable="false"></div>';
+          html += '<span class="premise-text">' + subRow.copula + '</span>';
+          html += '<div class="drop-zone" data-zone-id="zone-' + flatIdx + '-predicate" draggable="false"></div>';
+          html += '</div>';
+          html += '</div>';
+          flatIdx++;
+        });
+        html += '</div>';
+      } else {
+        html += '<div class="premise-row">';
+        html += '<div class="premise-label">' + row.label + '</div>';
+        html += '<div class="premise-content">';
+        html += '<span class="premise-text">' + row.quantifier + '</span>';
+        html += '<div class="drop-zone" data-zone-id="zone-' + flatIdx + '-subject" draggable="false"></div>';
+        html += '<span class="premise-text">' + row.copula + '</span>';
+        html += '<div class="drop-zone" data-zone-id="zone-' + flatIdx + '-predicate" draggable="false"></div>';
+        html += '</div>';
+        html += '</div>';
+        flatIdx++;
+      }
     });
     html += '</div>';
     // Token tray
@@ -322,6 +410,14 @@
     html += '</div>';
     area.innerHTML = html;
     // Wire up buttons
+    var codeToggle = document.getElementById('btn-code-toggle');
+    if (codeToggle) {
+      codeToggle.addEventListener('click', function() {
+        var codeEl = document.getElementById('code-value');
+        codeEl.classList.toggle('hidden');
+        this.textContent = codeEl.classList.contains('hidden') ? 'Show Code' : 'Hide Code';
+      });
+    }
     document.getElementById('btn-check').addEventListener('click', handleCheck);
     document.getElementById('btn-reveal').addEventListener('click', handleRevealClick);
     document.getElementById('btn-reset-q').addEventListener('click', function() {
@@ -491,6 +587,32 @@
       Game.App.navigate('map');
     });
   }
+  function showQuestionCountModal(levelNum) {
+    var overlay = document.createElement('div');
+    overlay.className = 'game-overlay';
+    overlay.innerHTML = '<div class="overlay-content question-count-overlay">' +
+      '<h2>Prepare for Battle</h2>' +
+      '<p>How many questions?</p>' +
+      '<div class="question-count-buttons">' +
+      '<button class="btn btn-primary question-count-btn" data-count="5">5</button>' +
+      '<button class="btn btn-primary question-count-btn" data-count="10">10</button>' +
+      '<button class="btn btn-primary question-count-btn" data-count="15">15</button>' +
+      '</div>' +
+      '<button class="btn btn-secondary btn-sm" id="btn-cancel-count">Cancel</button>' +
+      '</div>';
+    document.body.appendChild(overlay);
+    overlay.querySelectorAll('.question-count-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var count = parseInt(this.dataset.count);
+        overlay.remove();
+        Game.App.startBattle(levelNum, count);
+      });
+    });
+    document.getElementById('btn-cancel-count').addEventListener('click', function() {
+      overlay.remove();
+    });
+  }
+
   Game.UI = {
     renderMap: renderMap,
     renderBattle: renderBattle,
@@ -498,6 +620,7 @@
     renderQuestion: renderQuestion,
     updateTrack: updateTrack,
     showError: showError,
+    showQuestionCountModal: showQuestionCountModal,
     LEVEL_NAMES: LEVEL_NAMES
   };
 })();
