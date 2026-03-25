@@ -47,55 +47,39 @@
       "code": "AAA-1 + AAA-1",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "P1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "All",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -104,55 +88,39 @@
       "code": "AAA-1 + AII-1",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -161,55 +129,39 @@
       "code": "AAA-1 + AEE-2",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "P1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "No",
+          "label": "Premise 2",
+          "quantifier": "All",
           "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
+          "label": "Premise 3",
+          "quantifier": "All",
+          "subject": "P2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -218,55 +170,39 @@
       "code": "AAA-1 + AOO-2",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "All",
+          "subject": "P2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "M1"
+          "predicate": "M2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -275,55 +211,39 @@
       "code": "AAA-1 + AAI-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -332,55 +252,39 @@
       "code": "AAA-1 + AII-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "All",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "Some",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -389,55 +293,39 @@
       "code": "AAA-1 + AAI-4",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "All",
+          "subject": "P2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -446,55 +334,39 @@
       "code": "AAA-1 + AEE-4",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "All",
+          "subject": "P2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "No",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "No",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -503,55 +375,39 @@
       "code": "EAE-1 + EAE-1",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
           "subject": "M1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "P1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "No",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -560,55 +416,39 @@
       "code": "EAE-1 + EIO-1",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -617,55 +457,39 @@
       "code": "EAE-1 + EAE-2",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
           "subject": "M1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "P1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "No",
-          "subject": "S1",
+          "subject": "P2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -674,55 +498,39 @@
       "code": "EAE-1 + EIO-2",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
           "subject": "M1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "P1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
+          "label": "Premise 2",
+          "quantifier": "All",
           "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -731,55 +539,39 @@
       "code": "EAE-1 + EAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -788,55 +580,39 @@
       "code": "EAE-1 + EIO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "Some",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -845,55 +621,39 @@
       "code": "EAE-1 + EAO-4",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -902,1423 +662,39 @@
       "code": "EAE-1 + EIO-4",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
           "subject": "M2",
           "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
           "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Celarent",
-      "code": "EAE-2 + EAE-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Ferio",
-      "code": "EAE-2 + EIO-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Double Cesare",
-      "code": "EAE-2 + EAE-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Festino",
-      "code": "EAE-2 + EIO-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Felapton",
-      "code": "EAE-2 + EAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Ferison",
-      "code": "EAE-2 + EIO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Fesapo",
-      "code": "EAE-2 + EAO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Cesare + Fresison",
-      "code": "EAE-2 + EIO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Celarent",
-      "code": "AEE-2 + EAE-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Ferio",
-      "code": "AEE-2 + EIO-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Cesare",
-      "code": "AEE-2 + EAE-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Festino",
-      "code": "AEE-2 + EIO-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Felapton",
-      "code": "AEE-2 + EAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Ferison",
-      "code": "AEE-2 + EIO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Fesapo",
-      "code": "AEE-2 + EAO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Fresison",
-      "code": "AEE-2 + EIO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Celarent",
-      "code": "AEE-4 + EAE-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Ferio",
-      "code": "AEE-4 + EIO-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Cesare",
-      "code": "AEE-4 + EAE-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Festino",
-      "code": "AEE-4 + EIO-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Felapton",
-      "code": "AEE-4 + EAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Ferison",
-      "code": "AEE-4 + EIO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Fesapo",
-      "code": "AEE-4 + EAO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Fresison",
-      "code": "AEE-4 + EIO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "P1"
         }
       ]
     },
@@ -2327,55 +703,39 @@
       "code": "AII-1 + IAI-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -2384,625 +744,39 @@
       "code": "AII-1 + IAI-4",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
           "subject": "M1",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
           "copula": "are",
           "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Darapti + Disamis",
-      "code": "AAI-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
+          "quantifier": "Some",
+          "subject": "S1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Darapti + Dimaris",
-      "code": "AAI-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Double Disamis",
-      "code": "IAI-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Disamis + Dimaris",
-      "code": "IAI-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Datisi + Disamis",
-      "code": "AII-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Datisi + Dimaris",
-      "code": "AII-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "P2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Bramantip + Disamis",
-      "code": "AAI-4 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Bramantip + Dimaris",
-      "code": "AAI-4 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Dimaris + Disamis",
-      "code": "IAI-4 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
+          "label": "Premise 3",
           "quantifier": "Some",
           "subject": "P2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
+          "label": "Premise 4",
           "quantifier": "All",
           "subject": "M2",
           "copula": "are",
-          "predicate": "M1"
+          "predicate": "S2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "P1"
-        }
-      ]
-    },
-    {
-      "name": "Double Dimaris",
-      "code": "IAI-4 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P1",
-              "copula": "are",
-              "predicate": "M1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -3011,55 +785,695 @@
       "code": "EIO-1 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "Some",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are not",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Celarent",
+      "code": "EAE-2 + EAE-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
           "quantifier": "No",
           "subject": "M2",
           "copula": "are",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
           "copula": "are",
           "predicate": "M2"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Ferio",
+      "code": "EAE-2 + EIO-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
         },
         {
-          "type": "normal",
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Double Cesare",
+      "code": "EAE-2 + EAE-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "S2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "M2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Festino",
+      "code": "EAE-2 + EIO-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
           "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Felapton",
+      "code": "EAE-2 + EAO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Ferison",
+      "code": "EAE-2 + EIO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Fesapo",
+      "code": "EAE-2 + EAO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Cesare + Fresison",
+      "code": "EAE-2 + EIO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "No",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Celarent",
+      "code": "AEE-2 + EAE-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Ferio",
+      "code": "AEE-2 + EIO-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Cesare",
+      "code": "AEE-2 + EAE-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Festino",
+      "code": "AEE-2 + EIO-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Felapton",
+      "code": "AEE-2 + EAO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Ferison",
+      "code": "AEE-2 + EIO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Fesapo",
+      "code": "AEE-2 + EAO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camestres + Fresison",
+      "code": "AEE-2 + EIO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "S1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
         }
       ]
     },
@@ -3068,55 +1482,39 @@
       "code": "EIO-2 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "P2",
+          "subject": "P1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "M1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "Some",
-          "subject": "M1",
+          "subject": "S1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are not",
+          "predicate": "P2"
         },
         {
-          "type": "normal",
           "label": "Premise 4",
           "quantifier": "All",
-          "subject": "M1",
+          "subject": "M2",
           "copula": "are",
-          "predicate": "S1"
+          "predicate": "S2"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Conclusion",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
         }
       ]
     },
@@ -3125,55 +1523,285 @@
       "code": "AOO-2 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "All",
-          "subject": "P2",
+          "subject": "P1",
           "copula": "are",
-          "predicate": "M2"
+          "predicate": "M1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
           "quantifier": "Some",
-          "subject": "M1",
+          "subject": "S1",
           "copula": "are not",
-          "predicate": "M2"
+          "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are not",
+          "predicate": "P2"
         },
         {
-          "type": "normal",
           "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Darapti + Disamis",
+      "code": "AAI-3 + IAI-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Darapti + Dimaris",
+      "code": "AAI-3 + IAI-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
           "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Double Disamis",
+      "code": "IAI-3 + IAI-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "Some",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Disamis + Dimaris",
+      "code": "IAI-3 + IAI-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "Some",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Datisi + Disamis",
+      "code": "AII-3 + IAI-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "Some",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Datisi + Dimaris",
+      "code": "AII-3 + IAI-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "Some",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -3182,55 +1810,39 @@
       "code": "EAO-3 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
         }
       ]
     },
@@ -3239,55 +1851,39 @@
       "code": "OAO-3 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "Some",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are not",
-          "predicate": "P2"
+          "predicate": "P1"
         },
         {
-          "type": "normal",
           "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
         }
       ]
     },
@@ -3296,55 +1892,531 @@
       "code": "EIO-3 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "M2",
+          "subject": "M1",
           "copula": "are",
+          "predicate": "P1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "Some",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are not",
           "predicate": "P2"
         },
         {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
+          "label": "Premise 4",
+          "quantifier": "All",
           "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Bramantip + Disamis",
+      "code": "AAI-4 + IAI-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Bramantip + Dimaris",
+      "code": "AAI-4 + IAI-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Celarent",
+      "code": "AEE-4 + EAE-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Ferio",
+      "code": "AEE-4 + EIO-1",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Cesare",
+      "code": "AEE-4 + EAE-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "No",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Festino",
+      "code": "AEE-4 + EIO-2",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Felapton",
+      "code": "AEE-4 + EAO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Ferison",
+      "code": "AEE-4 + EIO-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Fesapo",
+      "code": "AEE-4 + EAO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Camenes + Fresison",
+      "code": "AEE-4 + EIO-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "All",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "No",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "No",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Dimaris + Disamis",
+      "code": "IAI-4 + IAI-3",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "Some",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
+        }
+      ]
+    },
+    {
+      "name": "Double Dimaris",
+      "code": "IAI-4 + IAI-4",
+      "rows": [
+        {
+          "label": "Premise 1",
+          "quantifier": "Some",
+          "subject": "P1",
+          "copula": "are",
+          "predicate": "M1"
+        },
+        {
+          "label": "Premise 2",
+          "quantifier": "All",
+          "subject": "M1",
+          "copula": "are",
+          "predicate": "S1"
+        },
+        {
+          "label": "Premise 3",
+          "quantifier": "Some",
+          "subject": "P2",
+          "copula": "are",
+          "predicate": "M2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are",
+          "predicate": "P2"
         }
       ]
     },
@@ -3353,55 +2425,39 @@
       "code": "EAO-4 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M2",
+          "subject": "P1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
+          "label": "Premise 2",
           "quantifier": "All",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
         }
       ]
     },
@@ -3410,55 +2466,39 @@
       "code": "EIO-4 + OAO-3",
       "rows": [
         {
-          "type": "normal",
           "label": "Premise 1",
           "quantifier": "No",
-          "subject": "P2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M2",
+          "subject": "P1",
           "copula": "are",
           "predicate": "M1"
         },
         {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P2"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M1",
-              "copula": "are not",
-              "predicate": "P1"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
+          "label": "Premise 2",
+          "quantifier": "Some",
           "subject": "M1",
           "copula": "are",
           "predicate": "S1"
         },
         {
-          "type": "normal",
-          "label": "Conclusion 2",
+          "label": "Premise 3",
           "quantifier": "Some",
-          "subject": "S1",
+          "subject": "M2",
           "copula": "are not",
-          "predicate": "P1"
+          "predicate": "P2"
+        },
+        {
+          "label": "Premise 4",
+          "quantifier": "All",
+          "subject": "M2",
+          "copula": "are",
+          "predicate": "S2"
+        },
+        {
+          "label": "Conclusion",
+          "quantifier": "Some",
+          "subject": "S2",
+          "copula": "are not",
+          "predicate": "P2"
         }
       ]
     }
