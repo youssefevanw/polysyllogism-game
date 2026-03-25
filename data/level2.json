@@ -74,11 +74,9 @@
         { "id": "fallible-assemblies", "label": "Fallible Assemblies" }
       ],
       "distractors": [
-        { "id": "synods", "label": "Synods" },
-        { "id": "papal-conclaves", "label": "Papal Conclaves" }
+        { "id": "political-parties", "label": "Political Parties" }
       ]
     },
-
     {
       "name": "Darii",
       "code": "AII-1",
@@ -93,26 +91,26 @@
         { "id": "chosen-by-christ", "label": "Chosen by Christ" }
       ],
       "distractors": [
-        { "id": "pharisees", "label": "Pharisees" },
-        { "id": "zealots", "label": "Zealots" }
+        { "id": "gnostics", "label": "Gnostics" },
+        { "id": "heretics", "label": "Heretics" }
       ]
     },
     {
       "name": "Darii",
       "code": "AII-1",
       "rows": [
-        { "label": "Major Premise", "quantifier": "All", "subject": ["popes"], "copula": "are", "predicate": ["bishops-of-rome"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["popes"] },
+        { "label": "Major Premise", "quantifier": "All", "subject": ["popes-named-john"], "copula": "are", "predicate": ["bishops-of-rome"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["popes-named-john"] },
         { "label": "Conclusion", "quantifier": "Some", "subject": ["saints"], "copula": "are", "predicate": ["bishops-of-rome"] }
       ],
       "terms": [
         { "id": "saints", "label": "Saints" },
-        { "id": "popes", "label": "Popes" },
+        { "id": "popes-named-john", "label": "Popes Named John" },
         { "id": "bishops-of-rome", "label": "Bishops of Rome" }
       ],
       "distractors": [
-        { "id": "cardinals", "label": "Cardinals" },
-        { "id": "abbots", "label": "Abbots" }
+        { "id": "monasteries", "label": "Monasteries" },
+        { "id": "abbesses", "label": "Abbesses" }
       ]
     },
 
@@ -120,14 +118,14 @@
       "name": "Ferio",
       "code": "EIO-1",
       "rows": [
-        { "label": "Major Premise", "quantifier": "No", "subject": ["heresies"], "copula": "are", "predicate": ["orthodox-teachings"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["early-church-movements"], "copula": "are", "predicate": ["heresies"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["early-church-movements"], "copula": "are not", "predicate": ["orthodox-teachings"] }
+        { "label": "Major Premise", "quantifier": "No", "subject": ["heretics"], "copula": "are", "predicate": ["orthodox-teachers"] },
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["early-church-bishops"], "copula": "are", "predicate": ["heretics"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["early-church-bishops"], "copula": "are not", "predicate": ["orthodox-teachers"] }
       ],
       "terms": [
-        { "id": "early-church-movements", "label": "Early Church Movements" },
-        { "id": "heresies", "label": "Heresies" },
-        { "id": "orthodox-teachings", "label": "Orthodox Teachings" }
+        { "id": "early-church-bishops", "label": "Early Church Bishops" },
+        { "id": "heretics", "label": "Heretics" },
+        { "id": "orthodox-teachers", "label": "Orthodox Teachers" }
       ],
       "distractors": [
         { "id": "dogmas", "label": "Dogmas" },
