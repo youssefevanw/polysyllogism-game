@@ -35,14 +35,7 @@
           navigate('map');
           return;
         }
-        Game.DataLoader.loadLevel(levelNum)
-          .then(function(levelData) {
-            Game.Engine.startBattle(levelNum, levelData);
-            Game.UI.renderBattle(levelNum);
-          })
-          .catch(function(err) {
-            Game.UI.showError('Could not load level ' + levelNum + '. Make sure the data file exists.');
-          });
+        Game.UI.showQuestionCountModal(levelNum);
         break;
 
       case 'stats':
@@ -54,9 +47,30 @@
     }
   }
 
+  function startBattle(levelNum, questionCount) {
+    // Hide all views and show battle view
+    views.forEach(function(v) {
+      var el = document.getElementById(v + '-view');
+      if (el) el.classList.add('hidden');
+    });
+    currentView = 'battle';
+    var el = document.getElementById('battle-view');
+    if (el) el.classList.remove('hidden');
+
+    Game.DataLoader.loadLevel(levelNum)
+      .then(function(levelData) {
+        Game.Engine.startBattle(levelNum, levelData, questionCount);
+        Game.UI.renderBattle(levelNum);
+      })
+      .catch(function(err) {
+        Game.UI.showError('Could not load level ' + levelNum + '. Make sure the data file exists.');
+      });
+  }
+
   Game.App = {
     init: init,
-    navigate: navigate
+    navigate: navigate,
+    startBattle: startBattle
   };
 
   // Boot on DOM ready
