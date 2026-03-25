@@ -170,21 +170,20 @@
       ]
     },
     {
-      "//comment": "Come back!!"
       "name": "Cesare",
       "code": "EAE-2",
       "rows": [
-        { "label": "Major Premise", "quantifier": "No", "subject": ["iconoclasts"], "copula": "are", "predicate": ["venerators-of-icons"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["defenders-of-icons"], "copula": "are", "predicate": ["venerators-of-icons"] },
-        { "label": "Conclusion", "quantifier": "No", "subject": ["defenders-of-icons"], "copula": "are", "predicate": ["iconoclasts"] }
+        { "label": "Major Premise", "quantifier": "No", "subject": ["iconoclasts"], "copula": "are", "predicate": ["defenders-of-icons"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["catholics"], "copula": "are", "predicate": ["defenders-of-icons"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["catholics"], "copula": "are", "predicate": ["iconoclasts"] }
       ],
       "terms": [
-        { "id": "defenders-of-icons", "label": "Defenders of Icons" },
+        { "id": "catholics", "label": "Catholics" },
         { "id": "iconoclasts", "label": "Iconoclasts" },
         { "id": "venerators-of-icons", "label": "Venerators of Icons" }
       ],
       "distractors": [
-        { "id": "arians", "label": "Arians" },
+        { "id": "hymns", "label": "Hymns" },
         { "id": "icons", "label": "Icons" }
       ]
     },
@@ -281,22 +280,19 @@
       ]
     },
     {
-      "//comment": "Come Back!"
       "name": "Baroco",
       "code": "AOO-2",
       "rows": [
         { "label": "Major Premise", "quantifier": "All", "subject": ["ecumenical-councils"], "copula": "are", "predicate": ["confirmed-by-the-pope"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["church-synods"], "copula": "are not", "predicate": ["confirmed-by-the-pope"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["church-synods"], "copula": "are not", "predicate": ["ecumenical-councils"] }
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["devotional-prayers"], "copula": "are not", "predicate": ["confirmed-by-the-pope"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["devotional-prayers"], "copula": "are not", "predicate": ["ecumenical-councils"] }
       ],
       "terms": [
-        { "id": "church-synods", "label": "Church Synods" },
+        { "id": "devotional-prayers", "label": "Devotional Prayers" },
         { "id": "ecumenical-councils", "label": "Ecumenical Councils" },
         { "id": "confirmed-by-the-pope", "label": "Confirmed by the Pope" }
       ],
       "distractors": [
-        { "id": "monasteries", "label": "Monasteries" },
-        { "id": "hymns", "label": "Hymns" }
       ]
     },
 
@@ -317,7 +313,7 @@
     { "id": "altars", "label": "Altars" },
     { "id": "vestments", "label": "Vestments" }
   ]
-}
+},
 
     {
       "name": "Disamis",
@@ -418,7 +414,7 @@
   "rows": [
     { "label": "Major Premise", "quantifier": "No", "subject": ["cardinal-virtues"], "copula": "are", "predicate": ["theological-virtues"] },
     { "label": "Minor Premise", "quantifier": "All", "subject": ["cardinal-virtues"], "copula": "are", "predicate": ["natural-habits-of-the-soul"] },
-    { "label": "Conclusion", "quantifier": "Some", "subject": ["habits-of-the-soul"], "copula": "are not", "predicate": ["theological-virtues"] }
+    { "label": "Conclusion", "quantifier": "Some", "subject": ["natural-habits-of-the-soul"], "copula": "are not", "predicate": ["theological-virtues"] }
   ],
   "terms": [
     { "id": "natural-habits-of-the-soul", "label": "Natural Habits of the Soul" },
@@ -429,19 +425,19 @@
     { "id": "cassocks", "label": "Cassocks" },
     { "id": "litanies", "label": "Litanies" }
   ]
-}
+},
 
     {
       "name": "Bocardo",
       "code": "OAO-3",
       "rows": [
-        { "label": "Major Premise", "quantifier": "Some", "subject": ["popes-named-john-paul"], "copula": "are not", "predicate": ["canonized-saints"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["popes-named-john-paul"], "copula": "are", "predicate": ["bishops-of-rome"] },
+        { "label": "Major Premise", "quantifier": "Some", "subject": ["popes-named-francis"], "copula": "are not", "predicate": ["canonized-saints"] },
+        { "label": "Minor Premise", "quantifier": "All", "subject": ["popes-named-francis"], "copula": "are", "predicate": ["bishops-of-rome"] },
         { "label": "Conclusion", "quantifier": "Some", "subject": ["bishops-of-rome"], "copula": "are not", "predicate": ["canonized-saints"] }
       ],
       "terms": [
         { "id": "bishops-of-rome", "label": "Bishops of Rome" },
-        { "id": "popes-named-john-paul", "label": "Popes-Named-John-Paul" },
+        { "id": "popes-named-francis", "label": "Popes-Named-francis" },
         { "id": "canonized-saints", "label": "Canonized Saints" }
       ],
       "distractors": [
@@ -463,8 +459,8 @@
         { "id": "founded-in-the-middle-ages", "label": "Founded in the Middle Ages" }
       ],
       "distractors": [
-        { "id": "breakdancers", "label": "Breakdances" },
-        { "id": "Dominicans", "label": "Dominicans" }
+        { "id": "breakdancers", "label": "Breakdancers" },
+        { "id": "dominicans", "label": "Dominicans" }
       ]
     },
 
@@ -486,25 +482,7 @@
         { "id": "antiphons", "label": "Antiphons" }
       ]
     },
-    {
-      "//comment": "Come Back!"
-      "name": "Ferison",
-      "code": "EIO-3",
-      "rows": [
-        { "label": "Major Premise", "quantifier": "No", "subject": ["protestant-reformers"], "copula": "are", "predicate": ["defenders-of-papal-primacy"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["protestant-reformers"], "copula": "are", "predicate": ["former-priests"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["former-priests"], "copula": "are not", "predicate": ["defenders-of-papal-primacy"] }
-      ],
-      "terms": [
-        { "id": "former-priests", "label": "Former Priests" },
-        { "id": "protestant-reformers", "label": "Protestant Reformers" },
-        { "id": "defenders-of-papal-primacy", "label": "Defenders of Papal Primacy" }
-      ],
-      "distractors": [
-        { "id": "counter-reformers", "label": "Counter-Reformers" },
-        { "id": "humanists", "label": "Humanists" }
-      ]
-    },
+
 
     {
       "name": "Bramantip",
@@ -617,25 +595,7 @@
       ]
     },
 
-    {
-      "//comment": "Come back!"
-      "name": "Fesapo",
-      "code": "EAO-4",
-      "rows": [
-        { "label": "Major Premise", "quantifier": "No", "subject": ["heretics"], "copula": "are", "predicate": ["in-communion-with-rome"] },
-        { "label": "Minor Premise", "quantifier": "All", "subject": ["in-communion-with-rome"], "copula": "are", "predicate": ["members-of-the-catholic-church"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["members-of-the-catholic-church"], "copula": "are not", "predicate": ["heretics"] }
-      ],
-      "terms": [
-        { "id": "members-of-the-catholic-church", "label": "Members of the Catholic Church" },
-        { "id": "heretics", "label": "Heretics" },
-        { "id": "in-communion-with-rome", "label": "In Communion with Rome" }
-      ],
-      "distractors": [
-        { "id": "missals", "label": "Missals" },
-        { "id": "feast-days", "label": "Feast-Days" }
-      ]
-    },
+
     {
       "name": "Fesapo",
       "code": "EAO-4",
@@ -660,12 +620,12 @@
       "code": "EIO-4",
       "rows": [
         { "label": "Major Premise", "quantifier": "No", "subject": ["eastern-catholics"], "copula": "are", "predicate": ["western-catholics"] },
-        { "label": "Minor Premise", "quantifier": "Some", "subject": ["apophatic-prayers"], "copula": "are", "predicate": ["eastern-catholics"] },
-        { "label": "Conclusion", "quantifier": "Some", "subject": ["apophatic-prayers"], "copula": "are not", "predicate": ["western-catholics"] }
+        { "label": "Minor Premise", "quantifier": "Some", "subject": ["apophatic-pray-ers"], "copula": "are", "predicate": ["eastern-catholics"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["apophatic-pray-ers"], "copula": "are not", "predicate": ["western-catholics"] }
       ],
       "terms": [
         { "id": "eastern-catholics", "label": "Eastern Catholics" },
-        { "id": "apophatic-prayers", "label": "Apophatic Prayers" },
+        { "id": "apophatic-pray-ers", "label": "Apophatic Pray-ers" },
         { "id": "western-catholics", "label": "Western Catholics" }
       ],
       "distractors": [
