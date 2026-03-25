@@ -187,22 +187,33 @@
   }
 
   function showCorrectAnswers(container, problem, levelData) {
-    problem.rows.forEach(function(row, rowIdx) {
-      var subjZone = container.querySelector('.drop-zone[data-zone-id="zone-' + rowIdx + '-subject"]');
-      var predZone = container.querySelector('.drop-zone[data-zone-id="zone-' + rowIdx + '-predicate"]');
-
-      var subjAnswer = Array.isArray(row.subject) ? row.subject[0] : row.subject;
-      var predAnswer = Array.isArray(row.predicate) ? row.predicate[0] : row.predicate;
-
-      if (subjZone) {
-        revealZone(subjZone, subjAnswer, levelData);
-        subjZone.classList.add('correct');
-      }
-      if (predZone) {
-        revealZone(predZone, predAnswer, levelData);
-        predZone.classList.add('correct');
+    var flatIdx = 0;
+    problem.rows.forEach(function(row) {
+      if (row.type === 'bridge') {
+        row.rows.forEach(function(subRow) {
+          revealRow(container, subRow, flatIdx, levelData);
+          flatIdx++;
+        });
+      } else {
+        revealRow(container, row, flatIdx, levelData);
+        flatIdx++;
       }
     });
+  }
+
+  function revealRow(container, row, idx, levelData) {
+    var subjZone = container.querySelector('.drop-zone[data-zone-id="zone-' + idx + '-subject"]');
+    var predZone = container.querySelector('.drop-zone[data-zone-id="zone-' + idx + '-predicate"]');
+    var subjAnswer = Array.isArray(row.subject) ? row.subject[0] : row.subject;
+    var predAnswer = Array.isArray(row.predicate) ? row.predicate[0] : row.predicate;
+    if (subjZone) {
+      revealZone(subjZone, subjAnswer, levelData);
+      subjZone.classList.add('correct');
+    }
+    if (predZone) {
+      revealZone(predZone, predAnswer, levelData);
+      predZone.classList.add('correct');
+    }
   }
 
   function revealZone(zone, answer, levelData) {
