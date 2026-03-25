@@ -5,14 +5,19 @@
   "tokenType": "image",
   "problems": [
     {
-      "name": "Chain of Being",
+      "name": "Barbara + Barbara",
       "code": "AAA-1 + AAA-1",
       "rows": [
-        { "label": "Premise 1", "quantifier": "All", "subject": ["living things"], "copula": "are", "predicate": ["substances"] },
-        { "label": "Premise 2", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["living things"] },
-        { "label": "Premise 3", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["substances"] },
-        { "label": "Premise 4", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["animals"] },
-        { "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["substances"] }
+        { "type": "normal", "label": "Premise 1", "quantifier": "All", "subject": ["living things"], "copula": "are", "predicate": ["substances"] },
+        { "type": "normal", "label": "Premise 2", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["living things"] },
+        {
+          "type": "bridge",
+          "rows": [
+            { "label": "Conclusion 1", "quantifier": "All", "subject": ["animals"], "copula": "are", "predicate": ["substances"] },
+            { "label": "Premise 3", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["animals"] }
+          ]
+        },
+        { "type": "normal", "label": "Conclusion", "quantifier": "All", "subject": ["dogs"], "copula": "are", "predicate": ["substances"] }
       ],
       "terms": [
         { "id": "dogs", "label": "Dogs" },
