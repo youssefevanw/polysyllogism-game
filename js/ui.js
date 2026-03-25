@@ -5,8 +5,8 @@
     '',
     'Syllogisms: Notated',
     'Syllogisms: Terms',
+    'Syllogism Pairings',
     'Polysyllogisms: Notated',
-    'Polysyllogisms: Terms',
     'Aristotelian Sorites',
     'Goclenian Sorites'
   ];
@@ -232,10 +232,13 @@
     battleView.innerHTML = html;
     // Render current question
     renderQuestion();
-    // Init drag system
-    Game.Drag.init(document.getElementById('question-area'), function() {
-      // On change callback — nothing special needed
-    });
+    // Init drag system (skip for pairing game type)
+    var currentState = Game.Engine.getState();
+    if (!currentState.levelData.gameType || currentState.levelData.gameType !== 'pairing') {
+      Game.Drag.init(document.getElementById('question-area'), function() {
+        // On change callback — nothing special needed
+      });
+    }
     // Event listeners
     document.getElementById('btn-back-map').addEventListener('click', function() {
       if (confirm('Leave this battle? Your progress will be lost.')) {
@@ -317,6 +320,12 @@
     var levelData = state.levelData;
     var area = document.getElementById('question-area');
     if (!area) return;
+
+    if (levelData.gameType === 'pairing') {
+      renderPairingQuestion(state, problem, levelData, area);
+      return;
+    }
+
     var html = '';
     // Problem name and code toggle
     html += '<div class="question-header">';
@@ -433,6 +442,173 @@
       arr[j] = tmp;
     }
   }
+  // ===== PAIRING GAME MODE =====
+  function renderPairingQuestion(state, problem, levelData, area) {
+    var html = '';
+    // Problem name and code toggle
+    html += '<div class="question-header">';
+    html += '<div class="pairing-target">' + problem.name + '</div>';
+    if (problem.code) {
+      html += '<span class="question-code hidden" id="code-value">' + problem.code + '</span>';
+      html += '<button class="btn btn-sm btn-icon code-toggle" id="btn-code-toggle" title="Show/Hide Code">Show Code</button>';
+    }
+    html += '</div>';
+    // Instructions
+    if (levelData.instructions) {
+      html += '<div class="question-instructions">' + levelData.instructions + '</div>';
+    }
+    // Options grid
+    html += '<div class="pairing-options" id="pairing-options">';
+    problem.options.forEach(function(option) {
+      html += '<button class="pairing-option" data-option="' + option + '">' + option + '</button>';
+    });
+    html += '</div>';
+    // Action buttons
+    html += '<div class="action-buttons">';
+    html += '<button class="btn btn-primary" id="btn-check">Check</button>';
+    html += '<button class="btn btn-warning" id="btn-reveal">Reveal</button>';
+    html += '<button class="btn btn-secondary" id="btn-reset-q">Reset</button>';
+    html += '<button class="btn btn-primary hidden" id="btn-next">Next</button>';
+    html += '</div>';
+    area.innerHTML = html;
+    // Wire up code toggle
+    var codeToggle = document.getElementById('btn-code-toggle');
+    if (codeToggle) {
+      codeToggle.addEventListener('click', function() {
+        var codeEl = document.getElementById('code-value');
+        codeEl.classList.toggle('hidden');
+        this.textContent = codeEl.classList.contains('hidden') ? 'Show Code' : 'Hide Code';
+      });
+    }
+    // Wire up option toggle
+    area.querySelectorAll('.pairing-option').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        if (this.classList.contains('locked')) return;
+        this.classList.toggle('selected');
+      });
+    });
+    // Wire up action buttons
+    document.getElementById('btn-check').addEventListener('click', handlePairingCheck);
+    document.getElementById('btn-reveal').addEventListener('click', handlePairingReveal);
+    document.getElementById('btn-reset-q').addEventListener('click', function() {
+      area.querySelectorAll('.pairing-option').forEach(function(btn) {
+        btn.classList.remove('selected', 'option-correct', 'option-incorrect', 'option-missed');
+      });
+    });
+    document.getElementById('btn-next').addEventListener('click', handleNext);
+  }
+
+  function handlePairingCheck() {
+    var state = Game.Engine.getState();
+    if (!state || state.gameOver) return;
+    var area = document.getElementById('question-area');
+    var selectedOptions = [];
+    area.querySelectorAll('.pairing-option.selected').forEach(function(btn) {
+      selectedOptions.push(btn.dataset.option);
+    });
+    if (selectedOptions.length === 0) {
+      var optionsArea = area.querySelector('.pairing-options');
+      if (optionsArea) {
+        optionsArea.classList.add('shake');
+        setTimeout(function() { optionsArea.classList.remove('shake'); }, 500);
+      }
+      return;
+    }
+    var userAnswers = { selected: selectedOptions };
+    var result = Game.Engine.checkAnswer(userAnswers);
+    markPairingFeedback(area, result.results);
+    if (result.allCorrect) {
+      var moveResult = Game.Engine.handleCorrect();
+      if (moveResult.action === 'win') {
+        Game.Sound.playCorrect();
+        showAttackEffect('sword');
+        setTimeout(function() {
+          updateTrack();
+          showWinOverlay();
+        }, 400);
+      } else if (moveResult.action === 'retry-correct') {
+        lockPairingOptions(area);
+        showNextButton();
+      } else {
+        Game.Sound.playCorrect();
+        showAttackEffect('sword');
+        setTimeout(function() {
+          updateTrack();
+          lockPairingOptions(area);
+          showNextButton();
+        }, 400);
+      }
+    } else {
+      var moveResult = Game.Engine.handleWrong();
+      if (moveResult.action === 'lose') {
+        Game.Sound.playWrong();
+        showAttackEffect('fire');
+        setTimeout(function() {
+          updateTrack();
+          showLoseOverlay();
+        }, 400);
+      } else if (moveResult.action === 'wrong') {
+        Game.Sound.playWrong();
+        showAttackEffect('fire');
+        setTimeout(function() {
+          updateTrack();
+        }, 400);
+      }
+    }
+  }
+
+  function handlePairingReveal() {
+    var state = Game.Engine.getState();
+    if (!state || state.gameOver || state.questionState.revealed) return;
+    var area = document.getElementById('question-area');
+    var problem = Game.Engine.getCurrentProblem();
+    area.querySelectorAll('.pairing-option').forEach(function(btn) {
+      var optionName = btn.dataset.option;
+      if (problem.correct.indexOf(optionName) !== -1) {
+        btn.classList.add('option-correct', 'option-revealed');
+      }
+      btn.classList.add('locked');
+    });
+    var moveResult = Game.Engine.handleReveal();
+    Game.Sound.playReveal();
+    setTimeout(function() {
+      updateTrack();
+      if (moveResult.action === 'lose') {
+        showLoseOverlay();
+      } else {
+        showNextButton();
+      }
+    }, 400);
+  }
+
+  function markPairingFeedback(area, results) {
+    // Clear previous feedback
+    area.querySelectorAll('.pairing-option').forEach(function(btn) {
+      btn.classList.remove('option-correct', 'option-incorrect', 'option-missed');
+    });
+    results.forEach(function(r) {
+      var btn = area.querySelector('.pairing-option[data-option="' + r.option + '"]');
+      if (!btn) return;
+      if (r.correct) {
+        if (r.selected) {
+          btn.classList.add('option-correct');
+        }
+      } else {
+        if (r.selected && !r.shouldBeSelected) {
+          btn.classList.add('option-incorrect');
+        } else if (!r.selected && r.shouldBeSelected) {
+          btn.classList.add('option-missed');
+        }
+      }
+    });
+  }
+
+  function lockPairingOptions(area) {
+    area.querySelectorAll('.pairing-option').forEach(function(btn) {
+      btn.classList.add('locked');
+    });
+  }
+
   function handleCheck() {
     var state = Game.Engine.getState();
     if (!state || state.gameOver) return;
@@ -529,7 +705,10 @@
   function handleNext() {
     Game.Engine.nextQuestion();
     renderQuestion();
-    Game.Drag.init(document.getElementById('question-area'), function() {});
+    var state = Game.Engine.getState();
+    if (!state.levelData.gameType || state.levelData.gameType !== 'pairing') {
+      Game.Drag.init(document.getElementById('question-area'), function() {});
+    }
   }
   // ===== WIN/LOSE OVERLAYS =====
   function showWinOverlay() {
