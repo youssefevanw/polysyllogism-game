@@ -12,28 +12,16 @@
     var georgeStart = Math.floor(trackSize / 2);
     var dragonStart = georgeStart + 1;
 
-    // Shuffle and select problems
-    var allProblems = levelData.problems.slice();
-    shuffle(allProblems);
-    var problems;
-    if (allProblems.length >= questionCount) {
-      problems = allProblems.slice(0, questionCount);
-    } else {
-      // Cycle through problems if fewer than requested
-      problems = [];
-      while (problems.length < questionCount) {
-        shuffle(allProblems);
-        for (var i = 0; i < allProblems.length && problems.length < questionCount; i++) {
-          problems.push(allProblems[i]);
-        }
-      }
-    }
+    // Use ALL problems from the bank, shuffled — no repeats until exhausted
+    var problems = levelData.problems.slice();
+    shuffle(problems);
 
     return {
       levelNum: levelNum,
       levelData: levelData,
       problems: problems,
       currentIndex: 0,
+      shownCount: 0,
       trackSize: trackSize,
       georgePos: georgeStart,
       dragonPos: dragonStart,
@@ -41,7 +29,10 @@
       runStats: { correct: 0, wrong: 0, reveals: 0 },
       questionState: createQuestionState(),
       gameOver: false,
-      won: false
+      won: false,
+      timerStart: null,
+      timerEnd: null,
+      timerElapsed: 0
     };
   }
 
@@ -174,7 +165,8 @@
       state.dragonPos = state.trackSize;
       state.gameOver = true;
       state.won = true;
-      Game.Storage.recordWin(state.levelNum, state.runStats);
+      stopTimer();
+      Game.Storage.recordWin(state.levelNum, state.runStats, state.timerElapsed);
       return { action: 'win', georgePos: state.georgePos, dragonPos: state.dragonPos };
     }
 
@@ -203,7 +195,8 @@
       state.georgePos = LOSE_POS;
       state.gameOver = true;
       state.won = false;
-      Game.Storage.recordLoss(state.levelNum, state.runStats);
+      stopTimer();
+      Game.Storage.recordLoss(state.levelNum, state.runStats, state.timerElapsed);
       return { action: 'lose', georgePos: state.georgePos, dragonPos: state.dragonPos };
     }
 
@@ -230,7 +223,8 @@
       state.georgePos = LOSE_POS;
       state.gameOver = true;
       state.won = false;
-      Game.Storage.recordLoss(state.levelNum, state.runStats);
+      stopTimer();
+      Game.Storage.recordLoss(state.levelNum, state.runStats, state.timerElapsed);
       return { action: 'lose', georgePos: state.georgePos, dragonPos: state.dragonPos };
     }
 
@@ -241,13 +235,47 @@
     if (!state || state.gameOver) return null;
 
     state.currentIndex++;
-    // If we've used all problems, reshuffle
+    state.shownCount++;
+    // If we've used all problems, reshuffle with anti-repeat protection
     if (state.currentIndex >= state.problems.length) {
+      // Remember the last few shown to avoid them appearing first after reshuffle
+      var tailCount = Math.min(3, Math.floor(state.problems.length / 2));
+      var recentProblems = state.problems.slice(-tailCount);
       shuffle(state.problems);
+      // If any of the recent problems ended up in the first positions, swap them later
+      for (var i = 0; i < tailCount && i < state.problems.length; i++) {
+        if (recentProblems.indexOf(state.problems[i]) !== -1) {
+          // Find a non-recent problem later in the array to swap with
+          for (var j = tailCount; j < state.problems.length; j++) {
+            if (recentProblems.indexOf(state.problems[j]) === -1) {
+              var tmp = state.problems[i];
+              state.problems[i] = state.problems[j];
+              state.problems[j] = tmp;
+              break;
+            }
+          }
+        }
+      }
       state.currentIndex = 0;
     }
     state.questionState = createQuestionState();
     return getCurrentProblem();
+  }
+
+  function startTimer() {
+    if (state) state.timerStart = Date.now();
+  }
+
+  function stopTimer() {
+    if (!state || !state.timerStart) return;
+    state.timerEnd = Date.now();
+    state.timerElapsed = Math.round((state.timerEnd - state.timerStart) / 1000);
+  }
+
+  function getElapsedTime() {
+    if (!state || !state.timerStart) return 0;
+    if (state.timerEnd) return state.timerElapsed;
+    return Math.round((Date.now() - state.timerStart) / 1000);
   }
 
   function getTrackSize() {
@@ -264,6 +292,9 @@
     handleReveal: handleReveal,
     nextQuestion: nextQuestion,
     getTrackSize: getTrackSize,
+    startTimer: startTimer,
+    stopTimer: stopTimer,
+    getElapsedTime: getElapsedTime,
     LOSE_POS: LOSE_POS
   };
 })();

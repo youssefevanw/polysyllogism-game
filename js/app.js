@@ -30,12 +30,12 @@
         break;
 
       case 'battle':
-        var levelNum = params.level;
-        if (!levelNum || !Game.Storage.isLevelUnlocked(levelNum)) {
+        var levelId = params.level;
+        if (levelId == null || !Game.Storage.isLevelUnlocked(levelId)) {
           navigate('map');
           return;
         }
-        Game.UI.showQuestionCountModal(levelNum);
+        Game.UI.showQuestionCountModal(levelId);
         break;
 
       case 'stats':
@@ -47,7 +47,7 @@
     }
   }
 
-  function startBattle(levelNum, questionCount) {
+  function startBattle(levelId, questionCount) {
     // Hide all views and show battle view
     views.forEach(function(v) {
       var el = document.getElementById(v + '-view');
@@ -57,13 +57,13 @@
     var el = document.getElementById('battle-view');
     if (el) el.classList.remove('hidden');
 
-    Game.DataLoader.loadLevel(levelNum)
+    Game.DataLoader.loadLevel(levelId)
       .then(function(levelData) {
-        Game.Engine.startBattle(levelNum, levelData, questionCount);
-        Game.UI.renderBattle(levelNum);
+        Game.Engine.startBattle(levelId, levelData, questionCount);
+        Game.UI.renderBattle(levelId);
       })
       .catch(function(err) {
-        Game.UI.showError('Could not load level ' + levelNum + '. Make sure the data file exists.');
+        Game.UI.showError('Could not load level ' + levelId + '. Make sure the data file exists.');
       });
   }
 

@@ -4,12 +4,24 @@
 
   var cache = {};
 
+  var LEVEL_FILES = {
+    1: 'data/level1.json',
+    2: 'data/level2.json',
+    3: 'data/level3.json',
+    4: 'data/level4.json',
+    'sq-a': 'data/sidequest-a.json',
+    'sq-b': 'data/sidequest-b.json'
+  };
+
   function loadLevel(levelNum) {
     if (cache[levelNum]) {
       return Promise.resolve(cache[levelNum]);
     }
 
-    var url = 'data/level' + levelNum + '.json';
+    var url = LEVEL_FILES[levelNum];
+    if (!url) {
+      return Promise.reject(new Error('Unknown level: ' + levelNum));
+    }
     return fetch(url)
       .then(function(response) {
         if (!response.ok) {

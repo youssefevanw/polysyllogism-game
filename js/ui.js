@@ -1,15 +1,60 @@
 // UI rendering for George and the Dragon
 (function() {
   'use strict';
-  var LEVEL_NAMES = [
-    '',
-    'Syllogisms: Notated',
-    'Syllogisms: Terms',
-    'Syllogism Pairings',
-    'Polysyllogisms: Notated',
-    'Aristotelian Sorites',
-    'Goclenian Sorites'
-  ];
+  var LEVEL_NAMES = {
+    1: 'Syllogisms: Notation',
+    2: 'Syllogism Pairings',
+    3: 'Polysyllogisms: Notation',
+    4: 'Sorites',
+    'sq-a': 'Syllogisms: Terms',
+    'sq-b': 'Polysyllogisms: Terms'
+  };
+
+  var timerInterval = null;
+
+  function formatTime(seconds) {
+    var m = Math.floor(seconds / 60);
+    var s = seconds % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function formatTimeLong(seconds) {
+    if (seconds >= 3600) {
+      var h = Math.floor(seconds / 3600);
+      var remainder = seconds % 3600;
+      var m = Math.floor(remainder / 60);
+      var s = remainder % 60;
+      return h + ':' + (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+    }
+    return formatTime(seconds);
+  }
+
+  function clearTimerInterval() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+  }
+
+  function startTimerDisplay() {
+    clearTimerInterval();
+    Game.Engine.startTimer();
+    timerInterval = setInterval(function() {
+      var display = document.getElementById('timer-display');
+      if (display) {
+        display.textContent = formatTime(Game.Engine.getElapsedTime());
+      }
+    }, 1000);
+  }
+
+  function createTimerIcon() {
+    return '<svg viewBox="0 0 16 16" width="20" height="20" style="image-rendering:pixelated"><circle cx="8" cy="9" r="6" fill="none" stroke="#ffd700" stroke-width="1.5"/><line x1="8" y1="9" x2="8" y2="5" stroke="#ffd700" stroke-width="1.5"/><line x1="8" y1="9" x2="11" y2="9" stroke="#ffd700" stroke-width="1"/><rect x="6" y="1" width="4" height="2" rx="1" fill="#ffd700"/></svg>';
+  }
+
+  function createTimerIconHidden() {
+    return '<svg viewBox="0 0 16 16" width="20" height="20" style="image-rendering:pixelated"><circle cx="8" cy="9" r="6" fill="none" stroke="#888" stroke-width="1.5"/><line x1="8" y1="9" x2="8" y2="5" stroke="#888" stroke-width="1.5"/><line x1="8" y1="9" x2="11" y2="9" stroke="#888" stroke-width="1"/><rect x="6" y="1" width="4" height="2" rx="1" fill="#888"/><line x1="2" y1="2" x2="14" y2="14" stroke="#f44" stroke-width="1.5"/></svg>';
+  }
+
   // ===== MAP VIEW =====
   function renderMap() {
     var mapView = document.getElementById('map-view');
@@ -44,39 +89,48 @@
       html += '<div class="garden-text">The Kingdom is Saved!</div>';
     } else {
       html += '<div class="garden-locked">' + Game.Sprites.createGardenLocked(320, 100) + '</div>';
-      html += '<div class="garden-text-locked">Complete all levels to unlock</div>';
+      html += '<div class="garden-text-locked">Complete all main levels to unlock</div>';
     }
     html += '</div>';
-    // Castle path with doors (6 to 1, top to bottom)
+
+    // Castle path with doors — 4 main levels + 2 side quests branching off
+    // Layout: Level 4 at top → Level 1 at bottom. Side quests branch right.
+    var mainLevels = [4, 3, 2, 1]; // Top to bottom
+    var sideQuestMap = { 1: 'sq-a', 3: 'sq-b' }; // Which main level each SQ branches from
+
     html += '<div class="castle-path">';
-    for (var i = 6; i >= 1; i--) {
-      var beaten = Game.Storage.isLevelBeaten(i);
-      var unlocked = Game.Storage.isLevelUnlocked(i);
-      var doorState = beaten ? 'beaten' : (unlocked ? 'unlocked' : 'locked');
-      var clickable = unlocked ? 'clickable' : '';
-      html += '<div class="path-segment">';
+    for (var m = 0; m < mainLevels.length; m++) {
+      var lvl = mainLevels[m];
+      var sq = sideQuestMap[lvl] || null;
+
+      html += '<div class="path-row">';
+
+      // Main path segment
+      html += '<div class="path-segment-main">';
       html += '<div class="path-line"></div>';
-      html += '<div class="door-wrapper ' + clickable + '" data-level="' + i + '">';
-      html += '<div class="door-sprite">' + Game.Sprites.createDoor(doorState, i) + '</div>';
-      html += '<div class="door-info">';
-      html += '<div class="door-level">Level ' + i + '</div>';
-      html += '<div class="door-name">' + LEVEL_NAMES[i] + '</div>';
-      if (beaten) {
-        html += '<div class="door-star">' + Game.Sprites.createStar(16) + '</div>';
-      } else if (!unlocked) {
-        html += '<div class="door-lock">' + Game.Sprites.createLock(14) + '</div>';
+      html += renderDoor(lvl, 'Level ' + lvl, false);
+      html += '</div>';
+
+      // Side quest branch (if any)
+      if (sq) {
+        html += '<div class="path-branch-connector"></div>';
+        html += '<div class="path-segment-side">';
+        html += renderDoor(sq, 'Side Quest', true);
+        html += '</div>';
       }
-      html += '</div>';
-      html += '</div>';
-      html += '</div>';
+
+      html += '</div>'; // path-row
     }
     html += '</div>';
     html += '</div>'; // map-container
     mapView.innerHTML = html;
+
     // Attach event listeners
     mapView.querySelectorAll('.door-wrapper.clickable').forEach(function(door) {
       door.addEventListener('click', function() {
-        var level = parseInt(this.dataset.level);
+        var level = this.dataset.level;
+        // Convert numeric string IDs to numbers for main levels
+        if (/^\d+$/.test(level)) level = parseInt(level);
         Game.Sound.playDoorClick();
         Game.App.navigate('battle', { level: level });
       });
@@ -95,6 +149,32 @@
       Game.Sound.ensureContext();
     });
   }
+
+  function renderDoor(levelId, label, isSideQuest) {
+    var beaten = Game.Storage.isLevelBeaten(levelId);
+    var unlocked = Game.Storage.isLevelUnlocked(levelId);
+    var doorState = beaten ? 'beaten' : (unlocked ? 'unlocked' : 'locked');
+    var clickable = unlocked ? 'clickable' : '';
+    var sqClass = isSideQuest ? ' door-sidequest' : '';
+
+    var html = '<div class="door-wrapper ' + clickable + sqClass + '" data-level="' + levelId + '">';
+    html += '<div class="door-sprite">' + Game.Sprites.createDoor(doorState, levelId) + '</div>';
+    html += '<div class="door-info">';
+    html += '<div class="door-level">' + label + '</div>';
+    html += '<div class="door-name">' + LEVEL_NAMES[levelId] + '</div>';
+    if (isSideQuest) {
+      html += '<div class="sidequest-label">Optional</div>';
+    }
+    if (beaten) {
+      html += '<div class="door-star">' + Game.Sprites.createStar(16) + '</div>';
+    } else if (!unlocked) {
+      html += '<div class="door-lock">' + Game.Sprites.createLock(14) + '</div>';
+    }
+    html += '</div>';
+    html += '</div>';
+    return html;
+  }
+
   function getMuteIcon() {
     var muted = Game.Storage.isMuted();
     if (muted) {
@@ -122,28 +202,19 @@
     html += '<div class="stat-item"><div class="stat-value">' + stats.totalCorrect + '</div><div class="stat-label">Correct</div></div>';
     html += '<div class="stat-item"><div class="stat-value">' + stats.totalAttempts + '</div><div class="stat-label">Attempts</div></div>';
     html += '<div class="stat-item"><div class="stat-value">' + stats.totalReveals + '</div><div class="stat-label">Reveals</div></div>';
-    html += '<div class="stat-item"><div class="stat-value">' + Game.Storage.getLevelsBeatenCount() + '/6</div><div class="stat-label">Levels</div></div>';
+    html += '<div class="stat-item"><div class="stat-value">' + Game.Storage.getLevelsBeatenCount() + '/4</div><div class="stat-label">Levels</div></div>';
+    html += '<div class="stat-item"><div class="stat-value">' + formatTimeLong(stats.totalTimePlayed || 0) + '</div><div class="stat-label">Time Played</div></div>';
     html += '</div>';
     html += '</div>';
-    // Per-level stats
+    // Per-level stats — Main Levels
     html += '<div class="stats-card">';
-    html += '<h3>Per Level</h3>';
-    html += '<table class="stats-table">';
-    html += '<thead><tr><th>Level</th><th>Status</th><th>Attempts</th><th>Best Run</th></tr></thead>';
-    html += '<tbody>';
-    for (var i = 1; i <= 6; i++) {
-      var ld = data.levels[String(i)];
-      var statusText = ld.beaten ? 'Beaten' : (Game.Storage.isLevelUnlocked(i) ? 'Unlocked' : 'Locked');
-      var statusClass = ld.beaten ? 'stat-beaten' : (Game.Storage.isLevelUnlocked(i) ? 'stat-unlocked' : 'stat-locked');
-      var bestRun = ld.bestRun ? (ld.bestRun.correct + ' correct, ' + ld.bestRun.wrong + ' wrong, ' + ld.bestRun.reveals + ' reveals') : '-';
-      html += '<tr>';
-      html += '<td>' + LEVEL_NAMES[i] + '</td>';
-      html += '<td class="' + statusClass + '">' + statusText + '</td>';
-      html += '<td>' + ld.attempts + '</td>';
-      html += '<td>' + bestRun + '</td>';
-      html += '</tr>';
-    }
-    html += '</tbody></table>';
+    html += '<h3>Main Levels</h3>';
+    html += renderLevelStatsTable(Game.Storage.MAIN_LEVELS, data);
+    html += '</div>';
+    // Per-level stats — Side Quests
+    html += '<div class="stats-card">';
+    html += '<h3>Side Quests</h3>';
+    html += renderLevelStatsTable(Game.Storage.SIDE_QUESTS, data);
     html += '</div>';
     // Save/Load Code
     html += '<div class="stats-card">';
@@ -210,17 +281,50 @@
       }
     });
   }
+
+  function renderLevelStatsTable(levelIds, data) {
+    var html = '<table class="stats-table">';
+    html += '<thead><tr><th>Level</th><th>Status</th><th>Attempts</th><th>Best Run</th><th>Best Time</th></tr></thead>';
+    html += '<tbody>';
+    for (var i = 0; i < levelIds.length; i++) {
+      var id = levelIds[i];
+      var ld = data.levels[String(id)];
+      if (!ld) continue;
+      var statusText = ld.beaten ? 'Beaten' : (Game.Storage.isLevelUnlocked(id) ? 'Unlocked' : 'Locked');
+      var statusClass = ld.beaten ? 'stat-beaten' : (Game.Storage.isLevelUnlocked(id) ? 'stat-unlocked' : 'stat-locked');
+      var bestRun = ld.bestRun ? (ld.bestRun.correct + ' correct, ' + ld.bestRun.wrong + ' wrong, ' + ld.bestRun.reveals + ' reveals') : '-';
+      var bestTime = ld.bestTime != null ? formatTime(ld.bestTime) : '-';
+      html += '<tr>';
+      html += '<td>' + LEVEL_NAMES[id] + '</td>';
+      html += '<td class="' + statusClass + '">' + statusText + '</td>';
+      html += '<td>' + ld.attempts + '</td>';
+      html += '<td>' + bestRun + '</td>';
+      html += '<td>' + bestTime + '</td>';
+      html += '</tr>';
+    }
+    html += '</tbody></table>';
+    return html;
+  }
+
   // ===== BATTLE VIEW =====
   function renderBattle(levelNum) {
+    clearTimerInterval();
     var battleView = document.getElementById('battle-view');
     var state = Game.Engine.getState();
     if (!state) return;
+    var timerVisible = Game.Storage.isTimerVisible();
     var html = '<div class="battle-container">';
     // Top bar
     html += '<div class="battle-header">';
     html += '<button class="btn btn-secondary btn-sm" id="btn-back-map">Retreat</button>';
     html += '<div class="battle-title">' + LEVEL_NAMES[levelNum] + '</div>';
+    html += '<div class="battle-header-right">';
+    html += '<div class="timer-section">';
+    html += '<button class="btn-icon" id="btn-timer-toggle" title="Toggle Timer">' + (timerVisible ? createTimerIcon() : createTimerIconHidden()) + '</button>';
+    html += '<span class="timer-display' + (timerVisible ? '' : ' hidden') + '" id="timer-display">00:00</span>';
+    html += '</div>';
     html += '<button class="btn-icon" id="btn-mute-battle">' + getMuteIcon() + '</button>';
+    html += '</div>';
     html += '</div>';
     // Battle arena
     html += '<div class="battle-arena">';
@@ -232,6 +336,8 @@
     battleView.innerHTML = html;
     // Render current question
     renderQuestion();
+    // Start timer
+    startTimerDisplay();
     // Init drag system (skip for pairing game type)
     var currentState = Game.Engine.getState();
     if (!currentState.levelData.gameType || currentState.levelData.gameType !== 'pairing') {
@@ -242,12 +348,26 @@
     // Event listeners
     document.getElementById('btn-back-map').addEventListener('click', function() {
       if (confirm('Leave this battle? Your progress will be lost.')) {
+        clearTimerInterval();
         Game.App.navigate('map');
       }
     });
     document.getElementById('btn-mute-battle').addEventListener('click', function() {
       Game.Storage.setMuted(!Game.Storage.isMuted());
       document.getElementById('btn-mute-battle').innerHTML = getMuteIcon();
+    });
+    document.getElementById('btn-timer-toggle').addEventListener('click', function() {
+      var display = document.getElementById('timer-display');
+      var visible = !display.classList.contains('hidden');
+      if (visible) {
+        display.classList.add('hidden');
+        Game.Storage.setTimerVisible(false);
+        this.innerHTML = createTimerIconHidden();
+      } else {
+        display.classList.remove('hidden');
+        Game.Storage.setTimerVisible(true);
+        this.innerHTML = createTimerIcon();
+      }
     });
   }
   function renderTrack(state) {
@@ -552,6 +672,12 @@
         showAttackEffect('fire');
         setTimeout(function() {
           updateTrack();
+          // Reset options after feedback so student can retry
+          setTimeout(function() {
+            area.querySelectorAll('.pairing-option').forEach(function(btn) {
+              btn.classList.remove('option-correct', 'option-incorrect', 'option-missed', 'selected');
+            });
+          }, 1500);
         }, 400);
       }
     }
@@ -712,19 +838,29 @@
   }
   // ===== WIN/LOSE OVERLAYS =====
   function showWinOverlay() {
+    clearTimerInterval();
     var state = Game.Engine.getState();
     Game.Sound.playWin();
+    var elapsed = state.timerElapsed || 0;
+    var levelData = Game.Storage.getLevelData(state.levelNum);
+    var isNewBest = levelData && (levelData.bestTime === null || elapsed <= levelData.bestTime);
+
     var overlay = document.createElement('div');
     overlay.className = 'game-overlay';
+    var statsHtml = '<div class="run-stats">' +
+      '<div class="stat-item"><span class="stat-value">' + state.runStats.correct + '</span><span class="stat-label">Correct</span></div>' +
+      '<div class="stat-item"><span class="stat-value">' + state.runStats.wrong + '</span><span class="stat-label">Wrong</span></div>' +
+      '<div class="stat-item"><span class="stat-value">' + state.runStats.reveals + '</span><span class="stat-label">Reveals</span></div>' +
+      '<div class="stat-item"><span class="stat-value">' + formatTime(elapsed) + '</span><span class="stat-label">Time</span></div>' +
+      '</div>';
+    var bestHtml = isNewBest ? '<div class="best-time-badge">New Best!</div>' : '';
+
     overlay.innerHTML = '<div class="overlay-content win-overlay">' +
       '<div class="overlay-sprite">' + Game.Sprites.createGeorge(96) + '</div>' +
       '<h2>Victory!</h2>' +
       '<p>The dragon has been defeated!</p>' +
-      '<div class="run-stats">' +
-      '<div class="stat-item"><span class="stat-value">' + state.runStats.correct + '</span><span class="stat-label">Correct</span></div>' +
-      '<div class="stat-item"><span class="stat-value">' + state.runStats.wrong + '</span><span class="stat-label">Wrong</span></div>' +
-      '<div class="stat-item"><span class="stat-value">' + state.runStats.reveals + '</span><span class="stat-label">Reveals</span></div>' +
-      '</div>' +
+      bestHtml +
+      statsHtml +
       '<button class="btn btn-primary" id="btn-win-map">Return to Map</button>' +
       '</div>';
     document.getElementById('battle-view').appendChild(overlay);
@@ -733,6 +869,7 @@
     });
   }
   function showLoseOverlay() {
+    clearTimerInterval();
     var state = Game.Engine.getState();
     Game.Sound.playLose();
     var overlay = document.createElement('div');

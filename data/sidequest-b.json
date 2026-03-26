@@ -1,0 +1,24 @@
+{
+  "level": "sq-b",
+  "title": "Polysyllogisms: Terms",
+  "instructions": "Drag the correct terms into the polysyllogism to make it valid and sound.",
+  "tokenType": "image",
+  "problems": [
+    {
+      "name": "Placeholder",
+      "rows": [
+        { "label": "Premise 1", "quantifier": "All", "subject": ["placeholder-a"], "copula": "are", "predicate": ["placeholder-b"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["placeholder-b"], "copula": "are", "predicate": ["placeholder-c"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["placeholder-a"], "copula": "are", "predicate": ["placeholder-c"] }
+      ],
+      "terms": [
+        { "id": "placeholder-a", "label": "Placeholder A" },
+        { "id": "placeholder-b", "label": "Placeholder B" },
+        { "id": "placeholder-c", "label": "Placeholder C" }
+      ],
+      "distractors": [
+        { "id": "placeholder-d", "label": "Placeholder D" }
+      ]
+    }
+  ]
+}

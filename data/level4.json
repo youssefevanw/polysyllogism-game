@@ -1,3466 +1,751 @@
 {
-  "level": 4,
-  "title": "Polysyllogisms: Notated",
-  "instructions": "Drag S1, P1, M1, S2, P2, and M2 into the correct positions.",
-  "tokenType": "notation",
-  "tokens": [
-    {
-      "id": "S1",
-      "label": "S1",
-      "sublabel": "Minor 1",
-      "color": "#7c3aed"
-    },
-    {
-      "id": "M1",
-      "label": "M1",
-      "sublabel": "Middle 1",
-      "color": "#0d9488"
-    },
-    {
-      "id": "P1",
-      "label": "P1",
-      "sublabel": "Major 1",
-      "color": "#d97706"
-    },
-    {
-      "id": "S2",
-      "label": "S2",
-      "sublabel": "Minor 2",
-      "color": "#dc2626"
-    },
-    {
-      "id": "M2",
-      "label": "M2",
-      "sublabel": "Middle 2",
-      "color": "#2563eb"
-    },
-    {
-      "id": "P2",
-      "label": "P2",
-      "sublabel": "Major 2",
-      "color": "#65a30d"
-    }
-  ],
+  "level": 5,
+  "title": "Sorites",
+  "instructions": "Drag the correct terms into the sorites to make it valid and sound. Pay attention to whether it is Aristotelian (most specific first) or Goclenian (broadest first).",
+  "tokenType": "image",
   "problems": [
+
     {
-      "name": "Double Barbara",
-      "code": "AAA-1 + AAA-1",
+      "name": "Aristotelian Sorites",
+      "code": "A1",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["franciscans"], "copula": "are", "predicate": ["mendicant-friars"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["mendicant-friars"], "copula": "are", "predicate": ["members-of-religious-orders"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["members-of-religious-orders"], "copula": "are", "predicate": ["members-of-the-church"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["franciscans"], "copula": "are", "predicate": ["members-of-the-church"] }
+      ],
+      "terms": [
+        { "id": "franciscans", "label": "Franciscans" },
+        { "id": "mendicant-friars", "label": "Mendicant Friars" },
+        { "id": "members-of-religious-orders", "label": "Members of Religious Orders" },
+        { "id": "members-of-the-church", "label": "Members of the Church" }
+      ],
+      "distractors": [
+        { "id": "chalices", "label": "Chalices" },
+        { "id": "basilicas", "label": "Basilicas" },
+        { "id": "feast-days", "label": "Feast Days" }
       ]
     },
+
     {
-      "name": "Barbara + Darii",
-      "code": "AAA-1 + AII-1",
+      "name": "Aristotelian Sorites",
+      "code": "A2",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["theological-virtues"], "copula": "are", "predicate": ["infused-virtues"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["infused-virtues"], "copula": "are", "predicate": ["supernatural-habits"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["supernatural-habits"], "copula": "are", "predicate": ["gifts-from-god"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["theological-virtues"], "copula": "are", "predicate": ["gifts-from-god"] }
+      ],
+      "terms": [
+        { "id": "theological-virtues", "label": "Theological Virtues" },
+        { "id": "infused-virtues", "label": "Infused Virtues" },
+        { "id": "supernatural-habits", "label": "Supernatural Habits" },
+        { "id": "gifts-from-god", "label": "Gifts from God" }
+      ],
+      "distractors": [
+        { "id": "monstrances", "label": "Monstrances" },
+        { "id": "catacombs", "label": "Catacombs" }
       ]
     },
+
     {
-      "name": "Barbara + Camestres",
-      "code": "AAA-1 + AEE-2",
+      "name": "Aristotelian Sorites",
+      "code": "A3",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["psalms"], "copula": "are", "predicate": ["books-of-the-old-testament"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["books-of-the-old-testament"], "copula": "are", "predicate": ["books-of-sacred-scripture"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["books-of-sacred-scripture"], "copula": "are", "predicate": ["divinely-inspired-writings"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["psalms"], "copula": "are", "predicate": ["divinely-inspired-writings"] }
+      ],
+      "terms": [
+        { "id": "psalms", "label": "Psalms" },
+        { "id": "books-of-the-old-testament", "label": "Books of the Old Testament" },
+        { "id": "books-of-sacred-scripture", "label": "Books of Sacred Scripture" },
+        { "id": "divinely-inspired-writings", "label": "Divinely Inspired Writings" }
+      ],
+      "distractors": [
+        { "id": "thuribles", "label": "Thuribles" },
+        { "id": "altar-cloths", "label": "Altar Cloths" }
       ]
     },
+
     {
-      "name": "Barbara + Baroco",
-      "code": "AAA-1 + AOO-2",
+      "name": "Aristotelian Sorites",
+      "code": "A4",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["mortal-sins"], "copula": "are", "predicate": ["sins"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["sins"], "copula": "are", "predicate": ["offenses-against-god"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["offenses-against-god"], "copula": "are", "predicate": ["moral-evils"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["mortal-sins"], "copula": "are", "predicate": ["moral-evils"] }
+      ],
+      "terms": [
+        { "id": "mortal-sins", "label": "Mortal Sins" },
+        { "id": "sins", "label": "Sins" },
+        { "id": "offenses-against-god", "label": "Offenses Against God" },
+        { "id": "moral-evils", "label": "Moral Evils" }
+      ],
+      "distractors": [
+        { "id": "cruets", "label": "Cruets" },
+        { "id": "baptismal-fonts", "label": "Baptismal Fonts" },
+        { "id": "stained-glass-windows", "label": "Stained Glass Windows" }
       ]
     },
+
     {
-      "name": "Barbara + Darapti",
-      "code": "AAA-1 + AAI-3",
+      "name": "Aristotelian Sorites",
+      "code": "A5",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["the-beatitudes"], "copula": "are", "predicate": ["teachings-from-the-sermon-on-the-mount"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["teachings-from-the-sermon-on-the-mount"], "copula": "are", "predicate": ["teachings-of-christ"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["teachings-of-christ"], "copula": "are", "predicate": ["divine-revelation"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["the-beatitudes"], "copula": "are", "predicate": ["divine-revelation"] }
+      ],
+      "terms": [
+        { "id": "the-beatitudes", "label": "The Beatitudes" },
+        { "id": "teachings-from-the-sermon-on-the-mount", "label": "Teachings from the Sermon on the Mount" },
+        { "id": "teachings-of-christ", "label": "Teachings of Christ" },
+        { "id": "divine-revelation", "label": "Divine Revelation" }
+      ],
+      "distractors": [
+        { "id": "hymnals", "label": "Hymnals" },
+        { "id": "sacristies", "label": "Sacristies" }
       ]
     },
+
     {
-      "name": "Barbara + Datisi",
-      "code": "AAA-1 + AII-3",
+      "name": "Aristotelian Sorites",
+      "code": "A6",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["gifts-of-the-holy-spirit"], "copula": "are", "predicate": ["supernatural-gifts"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["supernatural-gifts"], "copula": "are", "predicate": ["graces"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["graces"], "copula": "are", "predicate": ["unmerited-gifts-from-god"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["gifts-of-the-holy-spirit"], "copula": "are", "predicate": ["unmerited-gifts-from-god"] }
+      ],
+      "terms": [
+        { "id": "gifts-of-the-holy-spirit", "label": "Gifts of the Holy Spirit" },
+        { "id": "supernatural-gifts", "label": "Supernatural Gifts" },
+        { "id": "graces", "label": "Graces" },
+        { "id": "unmerited-gifts-from-god", "label": "Unmerited Gifts from God" }
+      ],
+      "distractors": [
+        { "id": "reliquaries", "label": "Reliquaries" },
+        { "id": "church-bells", "label": "Church Bells" },
+        { "id": "grottos", "label": "Grottos" }
       ]
     },
+
     {
-      "name": "Barbara + Bramantip",
-      "code": "AAA-1 + AAI-4",
+      "name": "Aristotelian Sorites",
+      "code": "A7",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["capuchins"], "copula": "are", "predicate": ["franciscans"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["franciscans"], "copula": "are", "predicate": ["mendicant-friars"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["mendicant-friars"], "copula": "are", "predicate": ["members-of-religious-orders"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["members-of-religious-orders"], "copula": "are", "predicate": ["members-of-the-church"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["capuchins"], "copula": "are", "predicate": ["members-of-the-church"] }
+      ],
+      "terms": [
+        { "id": "capuchins", "label": "Capuchins" },
+        { "id": "franciscans", "label": "Franciscans" },
+        { "id": "mendicant-friars", "label": "Mendicant Friars" },
+        { "id": "members-of-religious-orders", "label": "Members of Religious Orders" },
+        { "id": "members-of-the-church", "label": "Members of the Church" }
+      ],
+      "distractors": [
+        { "id": "patens", "label": "Patens" },
+        { "id": "shrines", "label": "Shrines" }
       ]
     },
+
     {
-      "name": "Barbara + Camenes",
-      "code": "AAA-1 + AEE-4",
+      "name": "Aristotelian Sorites",
+      "code": "A8",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "All",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "All",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "No",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["epistles-of-st-paul"], "copula": "are", "predicate": ["epistles"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["epistles"], "copula": "are", "predicate": ["books-of-the-new-testament"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["books-of-the-new-testament"], "copula": "are", "predicate": ["books-of-sacred-scripture"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["books-of-sacred-scripture"], "copula": "are", "predicate": ["divinely-inspired-writings"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["epistles-of-st-paul"], "copula": "are", "predicate": ["divinely-inspired-writings"] }
+      ],
+      "terms": [
+        { "id": "epistles-of-st-paul", "label": "Epistles of St. Paul" },
+        { "id": "epistles", "label": "Epistles" },
+        { "id": "books-of-the-new-testament", "label": "Books of the New Testament" },
+        { "id": "books-of-sacred-scripture", "label": "Books of Sacred Scripture" },
+        { "id": "divinely-inspired-writings", "label": "Divinely Inspired Writings" }
+      ],
+      "distractors": [
+        { "id": "ciboriums", "label": "Ciboriums" },
+        { "id": "abbeys", "label": "Abbeys" }
       ]
     },
+
     {
-      "name": "Double Celarent",
-      "code": "EAE-1 + EAE-1",
+      "name": "Aristotelian Sorites",
+      "code": "A9",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["stations-of-the-cross"], "copula": "are", "predicate": ["lenten-devotions"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["lenten-devotions"], "copula": "are", "predicate": ["penitential-practices"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["penitential-practices"], "copula": "are", "predicate": ["acts-of-piety"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["acts-of-piety"], "copula": "are", "predicate": ["forms-of-prayer"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["stations-of-the-cross"], "copula": "are", "predicate": ["forms-of-prayer"] }
+      ],
+      "terms": [
+        { "id": "stations-of-the-cross", "label": "Stations of the Cross" },
+        { "id": "lenten-devotions", "label": "Lenten Devotions" },
+        { "id": "penitential-practices", "label": "Penitential Practices" },
+        { "id": "acts-of-piety", "label": "Acts of Piety" },
+        { "id": "forms-of-prayer", "label": "Forms of Prayer" }
+      ],
+      "distractors": [
+        { "id": "lectionaries", "label": "Lectionaries" },
+        { "id": "holy-water-fonts", "label": "Holy Water Fonts" }
       ]
     },
+
     {
-      "name": "Celarent + Ferio",
-      "code": "EAE-1 + EIO-1",
+      "name": "Aristotelian Sorites",
+      "code": "A10",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["encyclicals"], "copula": "are", "predicate": ["papal-documents"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["papal-documents"], "copula": "are", "predicate": ["documents-of-the-magisterium"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["documents-of-the-magisterium"], "copula": "are", "predicate": ["expressions-of-church-teaching"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["expressions-of-church-teaching"], "copula": "are", "predicate": ["guides-for-the-faithful"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["encyclicals"], "copula": "are", "predicate": ["guides-for-the-faithful"] }
+      ],
+      "terms": [
+        { "id": "encyclicals", "label": "Encyclicals" },
+        { "id": "papal-documents", "label": "Papal Documents" },
+        { "id": "documents-of-the-magisterium", "label": "Documents of the Magisterium" },
+        { "id": "expressions-of-church-teaching", "label": "Expressions of Church Teaching" },
+        { "id": "guides-for-the-faithful", "label": "Guides for the Faithful" }
+      ],
+      "distractors": [
+        { "id": "chasubles", "label": "Chasubles" },
+        { "id": "tabernacles", "label": "Tabernacles" }
       ]
     },
+
     {
-      "name": "Celarent + Cesare",
-      "code": "EAE-1 + EAE-2",
+      "name": "Aristotelian Sorites",
+      "code": "A11",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["corporal-works-of-mercy"], "copula": "are", "predicate": ["works-of-mercy"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["works-of-mercy"], "copula": "are", "predicate": ["duties-of-the-christian-life"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["duties-of-the-christian-life"], "copula": "are", "predicate": ["teachings-of-the-church"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["teachings-of-the-church"], "copula": "are", "predicate": ["guides-for-the-faithful"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["corporal-works-of-mercy"], "copula": "are", "predicate": ["guides-for-the-faithful"] }
+      ],
+      "terms": [
+        { "id": "corporal-works-of-mercy", "label": "Corporal Works of Mercy" },
+        { "id": "works-of-mercy", "label": "Works of Mercy" },
+        { "id": "duties-of-the-christian-life", "label": "Duties of the Christian Life" },
+        { "id": "teachings-of-the-church", "label": "Teachings of the Church" },
+        { "id": "guides-for-the-faithful", "label": "Guides for the Faithful" }
+      ],
+      "distractors": [
+        { "id": "surplices", "label": "Surplices" },
+        { "id": "monasteries", "label": "Monasteries" }
       ]
     },
+
     {
-      "name": "Celarent + Festino",
-      "code": "EAE-1 + EIO-2",
+      "name": "Aristotelian Sorites",
+      "code": "A12",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["holy-days-of-obligation"], "copula": "are", "predicate": ["feast-days"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["feast-days"], "copula": "are", "predicate": ["days-in-the-liturgical-calendar"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["days-in-the-liturgical-calendar"], "copula": "are", "predicate": ["days-of-the-church-year"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["days-of-the-church-year"], "copula": "are", "predicate": ["days-set-apart-for-worship"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["holy-days-of-obligation"], "copula": "are", "predicate": ["days-set-apart-for-worship"] }
+      ],
+      "terms": [
+        { "id": "holy-days-of-obligation", "label": "Holy Days of Obligation" },
+        { "id": "feast-days", "label": "Feast Days" },
+        { "id": "days-in-the-liturgical-calendar", "label": "Days in the Liturgical Calendar" },
+        { "id": "days-of-the-church-year", "label": "Days of the Church Year" },
+        { "id": "days-set-apart-for-worship", "label": "Days Set Apart for Worship" }
+      ],
+      "distractors": [
+        { "id": "albs", "label": "Albs" },
+        { "id": "crucifixes", "label": "Crucifixes" }
       ]
     },
+
     {
-      "name": "Celarent + Felapton",
-      "code": "EAE-1 + EAO-3",
+      "name": "Goclenian Sorites",
+      "code": "G1",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["members-of-the-church-triumphant"], "copula": "are", "predicate": ["souls-in-heaven"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["saints"], "copula": "are", "predicate": ["members-of-the-church-triumphant"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["doctors-of-the-church"], "copula": "are", "predicate": ["saints"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["doctors-of-the-church"], "copula": "are", "predicate": ["souls-in-heaven"] }
+      ],
+      "terms": [
+        { "id": "members-of-the-church-triumphant", "label": "Members of the Church Triumphant" },
+        { "id": "souls-in-heaven", "label": "Souls in Heaven" },
+        { "id": "saints", "label": "Saints" },
+        { "id": "doctors-of-the-church", "label": "Doctors of the Church" }
+      ],
+      "distractors": [
+        { "id": "missals", "label": "Missals" },
+        { "id": "chapels", "label": "Chapels" },
+        { "id": "cassocks", "label": "Cassocks" }
       ]
     },
+
     {
-      "name": "Celarent + Ferison",
-      "code": "EAE-1 + EIO-3",
+      "name": "Goclenian Sorites",
+      "code": "G2",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["parts-of-sacred-scripture"], "copula": "are", "predicate": ["divinely-inspired"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["books-of-the-new-testament"], "copula": "are", "predicate": ["parts-of-sacred-scripture"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["gospels"], "copula": "are", "predicate": ["books-of-the-new-testament"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["gospels"], "copula": "are", "predicate": ["divinely-inspired"] }
+      ],
+      "terms": [
+        { "id": "parts-of-sacred-scripture", "label": "Parts of Sacred Scripture" },
+        { "id": "divinely-inspired", "label": "Divinely Inspired" },
+        { "id": "books-of-the-new-testament", "label": "Books of the New Testament" },
+        { "id": "gospels", "label": "Gospels" }
+      ],
+      "distractors": [
+        { "id": "stoles", "label": "Stoles" },
+        { "id": "baptisteries", "label": "Baptisteries" }
       ]
     },
+
     {
-      "name": "Celarent + Fesapo",
-      "code": "EAE-1 + EAO-4",
+      "name": "Goclenian Sorites",
+      "code": "G3",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["acts-of-worship"], "copula": "are", "predicate": ["pleasing-to-god"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["liturgical-celebrations"], "copula": "are", "predicate": ["acts-of-worship"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["masses"], "copula": "are", "predicate": ["liturgical-celebrations"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["masses"], "copula": "are", "predicate": ["pleasing-to-god"] }
+      ],
+      "terms": [
+        { "id": "acts-of-worship", "label": "Acts of Worship" },
+        { "id": "pleasing-to-god", "label": "Pleasing to God" },
+        { "id": "liturgical-celebrations", "label": "Liturgical Celebrations" },
+        { "id": "masses", "label": "Masses" }
+      ],
+      "distractors": [
+        { "id": "candelabras", "label": "Candelabras" },
+        { "id": "narthexes", "label": "Narthexes" }
       ]
     },
+
     {
-      "name": "Celarent + Fresison",
-      "code": "EAE-1 + EIO-4",
+      "name": "Goclenian Sorites",
+      "code": "G4",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["gifts-from-god"], "copula": "are", "predicate": ["good"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["graces"], "copula": "are", "predicate": ["gifts-from-god"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["actual-graces"], "copula": "are", "predicate": ["graces"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["actual-graces"], "copula": "are", "predicate": ["good"] }
+      ],
+      "terms": [
+        { "id": "gifts-from-god", "label": "Gifts from God" },
+        { "id": "good", "label": "Good" },
+        { "id": "graces", "label": "Graces" },
+        { "id": "actual-graces", "label": "Actual Graces" }
+      ],
+      "distractors": [
+        { "id": "aspergillums", "label": "Aspergillums" },
+        { "id": "bell-towers", "label": "Bell Towers" },
+        { "id": "vestments", "label": "Vestments" }
       ]
     },
+
     {
-      "name": "Darii + Disamis",
-      "code": "AII-1 + IAI-3",
+      "name": "Goclenian Sorites",
+      "code": "G5",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["teachings-of-the-church"], "copula": "are", "predicate": ["binding-on-the-faithful"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["dogmas"], "copula": "are", "predicate": ["teachings-of-the-church"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["marian-dogmas"], "copula": "are", "predicate": ["dogmas"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["marian-dogmas"], "copula": "are", "predicate": ["binding-on-the-faithful"] }
+      ],
+      "terms": [
+        { "id": "teachings-of-the-church", "label": "Teachings of the Church" },
+        { "id": "binding-on-the-faithful", "label": "Binding on the Faithful" },
+        { "id": "dogmas", "label": "Dogmas" },
+        { "id": "marian-dogmas", "label": "Marian Dogmas" }
+      ],
+      "distractors": [
+        { "id": "sanctuary-lamps", "label": "Sanctuary Lamps" },
+        { "id": "ambos", "label": "Ambos" }
       ]
     },
+
     {
-      "name": "Darii + Dimaris",
-      "code": "AII-1 + IAI-4",
+      "name": "Goclenian Sorites",
+      "code": "G6",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["moral-evils"], "copula": "are", "predicate": ["contrary-to-the-will-of-god"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["sins"], "copula": "are", "predicate": ["moral-evils"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["venial-sins"], "copula": "are", "predicate": ["sins"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["venial-sins"], "copula": "are", "predicate": ["contrary-to-the-will-of-god"] }
+      ],
+      "terms": [
+        { "id": "moral-evils", "label": "Moral Evils" },
+        { "id": "contrary-to-the-will-of-god", "label": "Contrary to the Will of God" },
+        { "id": "sins", "label": "Sins" },
+        { "id": "venial-sins", "label": "Venial Sins" }
+      ],
+      "distractors": [
+        { "id": "credence-tables", "label": "Credence Tables" },
+        { "id": "processional-crosses", "label": "Processional Crosses" }
       ]
     },
+
     {
-      "name": "Ferio + Bocardo",
-      "code": "EIO-1 + OAO-3",
+      "name": "Goclenian Sorites",
+      "code": "G7",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["parts-of-the-mystical-body-of-christ"], "copula": "are", "predicate": ["united-with-christ"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["members-of-the-church"], "copula": "are", "predicate": ["parts-of-the-mystical-body-of-christ"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["members-of-religious-orders"], "copula": "are", "predicate": ["members-of-the-church"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["benedictines"], "copula": "are", "predicate": ["members-of-religious-orders"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["benedictines"], "copula": "are", "predicate": ["united-with-christ"] }
+      ],
+      "terms": [
+        { "id": "parts-of-the-mystical-body-of-christ", "label": "Parts of the Mystical Body of Christ" },
+        { "id": "united-with-christ", "label": "United with Christ" },
+        { "id": "members-of-the-church", "label": "Members of the Church" },
+        { "id": "members-of-religious-orders", "label": "Members of Religious Orders" },
+        { "id": "benedictines", "label": "Benedictines" }
+      ],
+      "distractors": [
+        { "id": "thurible-chains", "label": "Thurible Chains" },
+        { "id": "altar-rails", "label": "Altar Rails" }
       ]
     },
+
     {
-      "name": "Cesare + Celarent",
-      "code": "EAE-2 + EAE-1",
+      "name": "Goclenian Sorites",
+      "code": "G8",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["prayers"], "copula": "are", "predicate": ["acts-of-worship"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["liturgical-prayers"], "copula": "are", "predicate": ["prayers"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["prayers-of-the-mass"], "copula": "are", "predicate": ["liturgical-prayers"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["eucharistic-prayers"], "copula": "are", "predicate": ["prayers-of-the-mass"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["eucharistic-prayers"], "copula": "are", "predicate": ["acts-of-worship"] }
+      ],
+      "terms": [
+        { "id": "prayers", "label": "Prayers" },
+        { "id": "acts-of-worship", "label": "Acts of Worship" },
+        { "id": "liturgical-prayers", "label": "Liturgical Prayers" },
+        { "id": "prayers-of-the-mass", "label": "Prayers of the Mass" },
+        { "id": "eucharistic-prayers", "label": "Eucharistic Prayers" }
+      ],
+      "distractors": [
+        { "id": "prie-dieux", "label": "Prie-Dieux" },
+        { "id": "sacristans-keys", "label": "Sacristans' Keys" }
       ]
     },
+
     {
-      "name": "Cesare + Ferio",
-      "code": "EAE-2 + EIO-1",
+      "name": "Goclenian Sorites",
+      "code": "G9",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["acts-of-the-soul"], "copula": "are", "predicate": ["spiritual-goods"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["forms-of-prayer"], "copula": "are", "predicate": ["acts-of-the-soul"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["devotions"], "copula": "are", "predicate": ["forms-of-prayer"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["novenas"], "copula": "are", "predicate": ["devotions"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["novenas"], "copula": "are", "predicate": ["spiritual-goods"] }
+      ],
+      "terms": [
+        { "id": "acts-of-the-soul", "label": "Acts of the Soul" },
+        { "id": "spiritual-goods", "label": "Spiritual Goods" },
+        { "id": "forms-of-prayer", "label": "Forms of Prayer" },
+        { "id": "devotions", "label": "Devotions" },
+        { "id": "novenas", "label": "Novenas" }
+      ],
+      "distractors": [
+        { "id": "communion-rails", "label": "Communion Rails" },
+        { "id": "ambries", "label": "Ambries" }
       ]
     },
+
     {
-      "name": "Double Cesare",
-      "code": "EAE-2 + EAE-2",
+      "name": "Goclenian Sorites",
+      "code": "G10",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["guides-for-the-faithful"], "copula": "are", "predicate": ["expressions-of-church-authority"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["documents-of-the-magisterium"], "copula": "are", "predicate": ["guides-for-the-faithful"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["conciliar-documents"], "copula": "are", "predicate": ["documents-of-the-magisterium"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["documents-of-vatican-ii"], "copula": "are", "predicate": ["conciliar-documents"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["documents-of-vatican-ii"], "copula": "are", "predicate": ["expressions-of-church-authority"] }
+      ],
+      "terms": [
+        { "id": "guides-for-the-faithful", "label": "Guides for the Faithful" },
+        { "id": "expressions-of-church-authority", "label": "Expressions of Church Authority" },
+        { "id": "documents-of-the-magisterium", "label": "Documents of the Magisterium" },
+        { "id": "conciliar-documents", "label": "Conciliar Documents" },
+        { "id": "documents-of-vatican-ii", "label": "Documents of Vatican II" }
+      ],
+      "distractors": [
+        { "id": "censer-boats", "label": "Censer Boats" },
+        { "id": "pews", "label": "Pews" }
       ]
     },
+
     {
-      "name": "Cesare + Festino",
-      "code": "EAE-2 + EIO-2",
+      "name": "Goclenian Sorites",
+      "code": "G11",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["goods-of-the-soul"], "copula": "are", "predicate": ["pleasing-to-god"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["virtuous-acts"], "copula": "are", "predicate": ["goods-of-the-soul"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["acts-of-charity"], "copula": "are", "predicate": ["virtuous-acts"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["spiritual-works-of-mercy"], "copula": "are", "predicate": ["acts-of-charity"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["spiritual-works-of-mercy"], "copula": "are", "predicate": ["pleasing-to-god"] }
+      ],
+      "terms": [
+        { "id": "goods-of-the-soul", "label": "Goods of the Soul" },
+        { "id": "pleasing-to-god", "label": "Pleasing to God" },
+        { "id": "virtuous-acts", "label": "Virtuous Acts" },
+        { "id": "acts-of-charity", "label": "Acts of Charity" },
+        { "id": "spiritual-works-of-mercy", "label": "Spiritual Works of Mercy" }
+      ],
+      "distractors": [
+        { "id": "altar-stones", "label": "Altar Stones" },
+        { "id": "pulpits", "label": "Pulpits" }
       ]
     },
+
     {
-      "name": "Cesare + Felapton",
-      "code": "EAE-2 + EAO-3",
+      "name": "Goclenian Sorites",
+      "code": "G12",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["persons-in-heaven"], "copula": "are", "predicate": ["intercessors-for-the-church"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["canonized-saints"], "copula": "are", "predicate": ["persons-in-heaven"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["martyr-saints"], "copula": "are", "predicate": ["canonized-saints"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["early-christian-martyrs"], "copula": "are", "predicate": ["martyr-saints"] },
+        { "label": "Conclusion", "quantifier": "All", "subject": ["early-christian-martyrs"], "copula": "are", "predicate": ["intercessors-for-the-church"] }
+      ],
+      "terms": [
+        { "id": "persons-in-heaven", "label": "Persons in Heaven" },
+        { "id": "intercessors-for-the-church", "label": "Intercessors for the Church" },
+        { "id": "canonized-saints", "label": "Canonized Saints" },
+        { "id": "martyr-saints", "label": "Martyr Saints" },
+        { "id": "early-christian-martyrs", "label": "Early Christian Martyrs" }
+      ],
+      "distractors": [
+        { "id": "confessionals", "label": "Confessionals" },
+        { "id": "baptismal-shells", "label": "Baptismal Shells" }
       ]
     },
+
     {
-      "name": "Cesare + Ferison",
-      "code": "EAE-2 + EIO-3",
+      "name": "Aristotelian Sorites (No)",
+      "code": "N1",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["mortal-sins"], "copula": "are", "predicate": ["sins"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["sins"], "copula": "are", "predicate": ["offenses-against-god"] },
+        { "label": "Premise 3", "quantifier": "No", "subject": ["offenses-against-god"], "copula": "are", "predicate": ["pleasing-to-god"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["mortal-sins"], "copula": "are", "predicate": ["pleasing-to-god"] }
+      ],
+      "terms": [
+        { "id": "mortal-sins", "label": "Mortal Sins" },
+        { "id": "sins", "label": "Sins" },
+        { "id": "offenses-against-god", "label": "Offenses Against God" },
+        { "id": "pleasing-to-god", "label": "Pleasing to God" }
+      ],
+      "distractors": [
+        { "id": "censers", "label": "Censers" },
+        { "id": "colonnades", "label": "Colonnades" },
+        { "id": "votive-candles", "label": "Votive Candles" }
       ]
     },
+
     {
-      "name": "Cesare + Fesapo",
-      "code": "EAE-2 + EAO-4",
+      "name": "Aristotelian Sorites (No)",
+      "code": "N2",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["heresies"], "copula": "are", "predicate": ["errors-against-the-faith"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["errors-against-the-faith"], "copula": "are", "predicate": ["false-doctrines"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["false-doctrines"], "copula": "are", "predicate": ["teachings-contrary-to-revelation"] },
+        { "label": "Premise 4", "quantifier": "No", "subject": ["teachings-contrary-to-revelation"], "copula": "are", "predicate": ["to-be-believed"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["heresies"], "copula": "are", "predicate": ["to-be-believed"] }
+      ],
+      "terms": [
+        { "id": "heresies", "label": "Heresies" },
+        { "id": "errors-against-the-faith", "label": "Errors Against the Faith" },
+        { "id": "false-doctrines", "label": "False Doctrines" },
+        { "id": "teachings-contrary-to-revelation", "label": "Teachings Contrary to Revelation" },
+        { "id": "to-be-believed", "label": "To be Believed" }
+      ],
+      "distractors": [
+        { "id": "rood-screens", "label": "Rood Screens" },
+        { "id": "aspersoria", "label": "Aspersoria" }
       ]
     },
+
     {
-      "name": "Cesare + Fresison",
-      "code": "EAE-2 + EIO-4",
+      "name": "Goclenian Sorites (No)",
+      "code": "N3",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "No", "subject": ["rejections-of-truth"], "copula": "are", "predicate": ["compatible-with-faith"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["denials-of-dogma"], "copula": "are", "predicate": ["rejections-of-truth"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["christological-heresies"], "copula": "are", "predicate": ["denials-of-dogma"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["christological-heresies"], "copula": "are", "predicate": ["compatible-with-faith"] }
+      ],
+      "terms": [
+        { "id": "rejections-of-truth", "label": "Rejections of Truth" },
+        { "id": "compatible-with-faith", "label": "Compatible with Faith" },
+        { "id": "denials-of-dogma", "label": "Denials of Dogma" },
+        { "id": "christological-heresies", "label": "Christological Heresies" }
+      ],
+      "distractors": [
+        { "id": "baldachins", "label": "Baldachins" },
+        { "id": "nave-pillars", "label": "Nave Pillars" }
       ]
     },
+
     {
-      "name": "Camestres + Celarent",
-      "code": "AEE-2 + EAE-1",
+      "name": "Goclenian Sorites (No)",
+      "code": "N4",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "No", "subject": ["obstacles-to-salvation"], "copula": "are", "predicate": ["to-be-embraced"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["attachments-to-sin"], "copula": "are", "predicate": ["obstacles-to-salvation"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["habitual-vices"], "copula": "are", "predicate": ["attachments-to-sin"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["patterns-of-mortal-sin"], "copula": "are", "predicate": ["habitual-vices"] },
+        { "label": "Conclusion", "quantifier": "No", "subject": ["patterns-of-mortal-sin"], "copula": "are", "predicate": ["to-be-embraced"] }
+      ],
+      "terms": [
+        { "id": "obstacles-to-salvation", "label": "Obstacles to Salvation" },
+        { "id": "to-be-embraced", "label": "To be Embraced" },
+        { "id": "attachments-to-sin", "label": "Attachments to Sin" },
+        { "id": "habitual-vices", "label": "Habitual Vices" },
+        { "id": "patterns-of-mortal-sin", "label": "Patterns of Mortal Sin" }
+      ],
+      "distractors": [
+        { "id": "predella-steps", "label": "Predella Steps" },
+        { "id": "sacrarium-drains", "label": "Sacrarium Drains" }
       ]
     },
+
     {
-      "name": "Camestres + Ferio",
-      "code": "AEE-2 + EIO-1",
+      "name": "Aristotelian Sorites (Some)",
+      "code": "S1",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "Some", "subject": ["prayers"], "copula": "are", "predicate": ["prayers-of-petition"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["prayers-of-petition"], "copula": "are", "predicate": ["requests-made-to-god"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["requests-made-to-god"], "copula": "are", "predicate": ["acts-of-faith"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["prayers"], "copula": "are", "predicate": ["acts-of-faith"] }
+      ],
+      "terms": [
+        { "id": "prayers", "label": "Prayers" },
+        { "id": "prayers-of-petition", "label": "Prayers of Petition" },
+        { "id": "requests-made-to-god", "label": "Requests Made to God" },
+        { "id": "acts-of-faith", "label": "Acts of Faith" }
+      ],
+      "distractors": [
+        { "id": "credence-tables-s", "label": "Credence Tables" },
+        { "id": "choir-stalls", "label": "Choir Stalls" }
       ]
     },
+
     {
-      "name": "Camestres + Cesare",
-      "code": "AEE-2 + EAE-2",
+      "name": "Aristotelian Sorites (Some)",
+      "code": "S2",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "Some", "subject": ["books-of-the-bible"], "copula": "are", "predicate": ["prophetic-books"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["prophetic-books"], "copula": "are", "predicate": ["books-of-the-old-testament"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["books-of-the-old-testament"], "copula": "are", "predicate": ["sacred-scripture"] },
+        { "label": "Premise 4", "quantifier": "All", "subject": ["sacred-scripture"], "copula": "are", "predicate": ["divinely-inspired-writings"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["books-of-the-bible"], "copula": "are", "predicate": ["divinely-inspired-writings"] }
+      ],
+      "terms": [
+        { "id": "books-of-the-bible", "label": "Books of the Bible" },
+        { "id": "prophetic-books", "label": "Prophetic Books" },
+        { "id": "books-of-the-old-testament", "label": "Books of the Old Testament" },
+        { "id": "sacred-scripture", "label": "Sacred Scripture" },
+        { "id": "divinely-inspired-writings", "label": "Divinely Inspired Writings" }
+      ],
+      "distractors": [
+        { "id": "lavabo-dishes", "label": "Lavabo Dishes" },
+        { "id": "purificators", "label": "Purificators" }
       ]
     },
+
     {
-      "name": "Camestres + Festino",
-      "code": "AEE-2 + EIO-2",
+      "name": "Goclenian Sorites (Some)",
+      "code": "S3",
+      "premiseCount": 3,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["acts-of-worship"], "copula": "are", "predicate": ["pleasing-to-god"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["liturgical-celebrations"], "copula": "are", "predicate": ["acts-of-worship"] },
+        { "label": "Premise 3", "quantifier": "Some", "subject": ["parish-events"], "copula": "are", "predicate": ["liturgical-celebrations"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["parish-events"], "copula": "are", "predicate": ["pleasing-to-god"] }
+      ],
+      "terms": [
+        { "id": "acts-of-worship-s", "label": "Acts of Worship" },
+        { "id": "pleasing-to-god-s", "label": "Pleasing to God" },
+        { "id": "liturgical-celebrations-s", "label": "Liturgical Celebrations" },
+        { "id": "parish-events", "label": "Parish Events" }
+      ],
+      "distractors": [
+        { "id": "sanctuary-bells", "label": "Sanctuary Bells" },
+        { "id": "organ-pipes", "label": "Organ Pipes" }
       ]
     },
+
     {
-      "name": "Camestres + Felapton",
-      "code": "AEE-2 + EAO-3",
+      "name": "Goclenian Sorites (Some)",
+      "code": "S4",
+      "premiseCount": 4,
       "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Ferison",
-      "code": "AEE-2 + EIO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Fesapo",
-      "code": "AEE-2 + EAO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camestres + Fresison",
-      "code": "AEE-2 + EIO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Festino + Bocardo",
-      "code": "EIO-2 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Baroco + Bocardo",
-      "code": "AOO-2 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "S1",
-          "copula": "are not",
-          "predicate": "M1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Darapti + Disamis",
-      "code": "AAI-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Darapti + Dimaris",
-      "code": "AAI-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Double Disamis",
-      "code": "IAI-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Disamis + Dimaris",
-      "code": "IAI-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Datisi + Disamis",
-      "code": "AII-3 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Datisi + Dimaris",
-      "code": "AII-3 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Felapton + Bocardo",
-      "code": "EAO-3 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Double Bocardo",
-      "code": "OAO-3 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are not",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Ferison + Bocardo",
-      "code": "EIO-3 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "P1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Bramantip + Disamis",
-      "code": "AAI-4 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Bramantip + Dimaris",
-      "code": "AAI-4 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Celarent",
-      "code": "AEE-4 + EAE-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Ferio",
-      "code": "AEE-4 + EIO-1",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Cesare",
-      "code": "AEE-4 + EAE-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "No",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Festino",
-      "code": "AEE-4 + EIO-2",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "M2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Felapton",
-      "code": "AEE-4 + EAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Ferison",
-      "code": "AEE-4 + EIO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Fesapo",
-      "code": "AEE-4 + EAO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Camenes + Fresison",
-      "code": "AEE-4 + EIO-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "All",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "No",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "No",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "No",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "Some",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Dimaris + Disamis",
-      "code": "IAI-4 + IAI-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Double Dimaris",
-      "code": "IAI-4 + IAI-4",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "Some",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "P2",
-              "copula": "are",
-              "predicate": "M2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Fesapo + Bocardo",
-      "code": "EAO-4 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "All",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
-      ]
-    },
-    {
-      "name": "Fresison + Bocardo",
-      "code": "EIO-4 + OAO-3",
-      "rows": [
-        {
-          "type": "normal",
-          "label": "Premise 1",
-          "quantifier": "No",
-          "subject": "P1",
-          "copula": "are",
-          "predicate": "M1"
-        },
-        {
-          "type": "normal",
-          "label": "Premise 2",
-          "quantifier": "Some",
-          "subject": "M1",
-          "copula": "are",
-          "predicate": "S1"
-        },
-        {
-          "type": "bridge",
-          "rows": [
-            {
-              "label": "Conclusion 1",
-              "quantifier": "Some",
-              "subject": "S1",
-              "copula": "are not",
-              "predicate": "P1"
-            },
-            {
-              "label": "Premise 3",
-              "quantifier": "Some",
-              "subject": "M2",
-              "copula": "are not",
-              "predicate": "P2"
-            }
-          ]
-        },
-        {
-          "type": "normal",
-          "label": "Premise 4",
-          "quantifier": "All",
-          "subject": "M2",
-          "copula": "are",
-          "predicate": "S2"
-        },
-        {
-          "type": "normal",
-          "label": "Conclusion 2",
-          "quantifier": "Some",
-          "subject": "S2",
-          "copula": "are not",
-          "predicate": "P2"
-        }
+        { "label": "Premise 1", "quantifier": "All", "subject": ["expressions-of-church-authority"], "copula": "are", "predicate": ["binding-on-the-faithful"] },
+        { "label": "Premise 2", "quantifier": "All", "subject": ["papal-teachings"], "copula": "are", "predicate": ["expressions-of-church-authority"] },
+        { "label": "Premise 3", "quantifier": "All", "subject": ["encyclicals"], "copula": "are", "predicate": ["papal-teachings"] },
+        { "label": "Premise 4", "quantifier": "Some", "subject": ["church-documents"], "copula": "are", "predicate": ["encyclicals"] },
+        { "label": "Conclusion", "quantifier": "Some", "subject": ["church-documents"], "copula": "are", "predicate": ["binding-on-the-faithful"] }
+      ],
+      "terms": [
+        { "id": "expressions-of-church-authority-s", "label": "Expressions of Church Authority" },
+        { "id": "binding-on-the-faithful-s", "label": "Binding on the Faithful" },
+        { "id": "papal-teachings", "label": "Papal Teachings" },
+        { "id": "encyclicals-s", "label": "Encyclicals" },
+        { "id": "church-documents", "label": "Church Documents" }
+      ],
+      "distractors": [
+        { "id": "sacring-bells", "label": "Sacring Bells" },
+        { "id": "altar-cards", "label": "Altar Cards" }
       ]
     }
+
   ]
 }
