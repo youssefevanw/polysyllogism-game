@@ -56,7 +56,7 @@
       "name": "Cesare",
       "code": "EAE-2",
       "options": ["Barbara", "Ferio", "Disamis", "Bocardo"],
-      "correct": ["Barbara", "Ferio"]
+      "correct": ["Ferio"]
     },
     {
       "name": "Cesare",
@@ -97,8 +97,8 @@
     {
       "name": "Baroco",
       "code": "AOO-2",
-      "options": ["Camenes", "Dimaris", "Darapti", "Ferio"],
-      "correct": ["Camenes", "Darapti"]
+      "options": ["Bocardo", "Dimaris", "Darapti", "Ferio"],
+      "correct": ["Bocardo"]
     },
     {
       "name": "Darapti",
@@ -116,7 +116,7 @@
       "name": "Disamis",
       "code": "IAI-3",
       "options": ["Dimaris", "Barbara", "Celarent", "Bocardo"],
-      "correct": ["Dimaris", "Barbara"]
+      "correct": ["Dimaris"]
     },
     {
       "name": "Disamis",
@@ -140,7 +140,7 @@
       "name": "Felapton",
       "code": "EAO-3",
       "options": ["Bocardo", "Barbara", "Celarent", "Disamis"],
-      "correct": ["Bocardo", "Barbara"]
+      "correct": ["Bocardo", "Celarent"]
     },
     {
       "name": "Felapton",
@@ -158,7 +158,7 @@
       "name": "Bocardo",
       "code": "OAO-3",
       "options": ["Celarent", "Dimaris", "Camestres", "Festino"],
-      "correct": ["Celarent", "Camestres"]
+      "correct": ["Festino"]
     },
     {
       "name": "Ferison",
@@ -200,7 +200,7 @@
       "name": "Dimaris",
       "code": "IAI-4",
       "options": ["Disamis", "Barbara", "Celarent", "Bocardo"],
-      "correct": ["Disamis", "Barbara"]
+      "correct": ["Disamis"]
     },
     {
       "name": "Dimaris",
@@ -212,7 +212,7 @@
       "name": "Fesapo",
       "code": "EAO-4",
       "options": ["Bocardo", "Barbara", "Disamis", "Celarent"],
-      "correct": ["Bocardo", "Barbara"]
+      "correct": ["Bocardo", "Celarent"]
     },
     {
       "name": "Fesapo",
